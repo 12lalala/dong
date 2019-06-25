@@ -54,14 +54,13 @@
 .header1 {
   height: 80px;
   max-width: 1200px;
-  min-width: 830px;
   margin: 0 auto;
   display: block;
   background: #ffffff;
 }
 
 .header2 {
-  width: 750px;
+  min-width: 750px;
   float: right;
   margin-top: 20px;
 }
@@ -70,6 +69,8 @@
   height: 55px;
   float: left;
   margin-top: 20px;
+}
+@media screen and (max-device-width: 830px) {
 }
 </style>
 

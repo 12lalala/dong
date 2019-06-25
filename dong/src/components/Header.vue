@@ -50,8 +50,26 @@
   <!-- 页首 -->
 </template>
 
+<style scoped>
+.header1 {
+  width: 95%;
+}
+
+.header2 {
+  width: 750px;
+  float: right;
+}
+
+.logo {
+  height: 55px;
+  float: left;
+  margin: 5px;
+  padding-left: 50px;
+}
+</style>
+
 <script>
 export default {
-  name: "Hello",
+  name: "Header",
 }
 </script>

@@ -37,13 +37,13 @@ new Vue({
 });
 
 
-// 注册组件
-import Header from './components/Header.vue'
-Vue.component('main-header', {
-  template: Header,
-  data: function () {
-    return {
-      activeIndex: "/",
-    }
-  }
-})
+// // 注册组件
+// import Header from './components/Header.vue'
+// Vue.component('main-header', {
+//   template: Header,
+//   data: function () {
+//     return {
+//       activeIndex: "/",
+//     }
+//   }
+// })

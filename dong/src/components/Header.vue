@@ -14,7 +14,7 @@
                mode="horizontal"
                router="true"
                @select="handleSelect"
-               text-color="#708eac">
+               text-color="#000000">
         <el-menu-item index="/">首页</el-menu-item>
         <el-submenu index="2">
           <template slot="title">关于我们</template>
@@ -52,19 +52,24 @@
 
 <style scoped>
 .header1 {
-  width: 95%;
+  height: 80px;
+  max-width: 1200px;
+  min-width: 830px;
+  margin: 0 auto;
+  display: block;
+  background: #ffffff;
 }
 
 .header2 {
   width: 750px;
   float: right;
+  margin-top: 20px;
 }
 
 .logo {
   height: 55px;
   float: left;
-  margin: 5px;
-  padding-left: 50px;
+  margin-top: 20px;
 }
 </style>
 

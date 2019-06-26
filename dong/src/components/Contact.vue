@@ -69,6 +69,7 @@ export default {
   height: 600px;
   margin: 0 auto;
   background-color: #fff;
+  margin-bottom: 50px;
 }
 .content h3 {
   font-size: 1.75em;

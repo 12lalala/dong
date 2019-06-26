@@ -10,13 +10,23 @@ Vue.use(VueRouter)
 import Hello from './components/Hello.vue'
 import n404 from './components/404'
 import Contact from './components/Contact.vue'
+import Talent from './components/Talent.vue'
+import DGUSTIntroduction from './components/DGUSTIntroduction'
 const routes = [{
     path: '/',
     component: Hello
   },
   {
+    path: '/1',
+    component: DGUSTIntroduction
+  },
+  {
     path: '/16',
     component: Contact
+  },
+  {
+    path: '/15',
+    component: Talent
   },
   {
     path: '/404',

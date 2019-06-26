@@ -1,9 +1,10 @@
 <template>
   <div class="main">
-    <main-header></main-header>
-    <img src="./../assets/404_2.png"
-         width="900px"
-         height="565.3px">
+    <div class="four">
+      <el-image style="width: 1000px; height: 660px"
+                :src="img"
+                :fit="fit"></el-image>
+    </div>
   </div>
 </template>
 <script>
@@ -12,6 +13,7 @@ export default {
   data () {
     return {
       activeIndex: "/404",
+      img: require('../assets/404_2.png')
     }
   }
 
@@ -19,31 +21,10 @@ export default {
 </script>
 
 <style scoped>
-html,
-body {
-  width: 100%;
-  height: 100%;
-  background: #f0faff;
-}
-
 .main {
   width: 1200px;
+}
+.four {
   margin: 0 auto;
-}
-
-.header1 {
-  width: 95%;
-  float: left;
-}
-
-.header2 {
-  width: 750px;
-  float: right;
-}
-
-.logo {
-  height: 50px;
-  float: left;
-  margin: 5px;
 }
 </style>

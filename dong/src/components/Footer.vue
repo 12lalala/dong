@@ -5,16 +5,16 @@
       <div class="link">
         <router-link to="/1"
                      title="关于我们">关于我们</router-link>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <el-divider direction="vertical"></el-divider>
         <router-link to="/16"
                      title="联系我们">联系我们</router-link>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <el-divider direction="vertical"></el-divider>
         <router-link to="/4"
                      title="合作伙伴">合作伙伴</router-link>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <el-divider direction="vertical"></el-divider>
         <router-link to="/15"
                      title="人才招聘">人才招聘</router-link>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <el-divider direction="vertical"></el-divider>
         <router-link to="/"
                      title="返回首页">返回首页</router-link>
         <br>
@@ -42,8 +42,9 @@ export default {
 <style scoped>
 .footer {
   width: 100%;
-  background: #409eff;
+  background: #007cf8f3;
   height: 80px;
+  overflow: hidden;
 }
 .content {
   max-width: 1200px;

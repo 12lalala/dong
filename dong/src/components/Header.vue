@@ -4,8 +4,8 @@
     <!-- logo -->
     <div class="logo">
       <img src="../assets/logo.jpg"
-           width="60px"
-           height="60px">
+           width="75px"
+           height="75px">
     </div>
     <div class="header2">
       <!-- 导航栏 -->
@@ -67,9 +67,8 @@
 }
 
 .logo {
-  height: 55px;
   float: left;
-  margin-top: 20px;
+  margin: 5px auto;
 }
 @media screen and (max-device-width: 830px) {
 }

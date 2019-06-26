@@ -9,9 +9,14 @@ Vue.use(VueRouter)
 //定义路由表
 import Hello from './components/Hello.vue'
 import n404 from './components/404'
+import Contact from './components/Contact.vue'
 const routes = [{
     path: '/',
     component: Hello
+  },
+  {
+    path: '/16',
+    component: Contact
   },
   {
     path: '/404',

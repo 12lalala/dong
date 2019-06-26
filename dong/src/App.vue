@@ -29,7 +29,7 @@ export default {
 .main {
   width: 100%;
   margin: 0 auto;
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 105px);
   max-width: 1920px;
 }
 

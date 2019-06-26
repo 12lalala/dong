@@ -31,5 +31,6 @@ export default {
   margin: 0 auto;
   min-height: calc(100vh - 80px);
 }
+
 /* 950px */
 </style>

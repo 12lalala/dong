@@ -57,6 +57,7 @@
   margin: 0 auto;
   display: block;
   background: #ffffff;
+  overflow: hidden;
 }
 
 .header2 {
@@ -77,5 +78,10 @@
 <script>
 export default {
   name: "Header",
+  data () {
+    return {
+      activeIndex: "/",
+    }
+  }
 }
 </script>

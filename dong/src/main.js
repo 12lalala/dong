@@ -7,11 +7,22 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 //定义路由表
-import Hello from './components/Hello.vue'
+import Hello from './components/Hello'
 import n404 from './components/404'
-import Contact from './components/Contact.vue'
-import Talent from './components/Talent.vue'
+import Contact from './components/Contact'
+import Talent from './components/Talent'
 import DGUSTIntroduction from './components/DGUSTIntroduction'
+import DGUSTTeam from './components/DGUSTTeam'
+import Organization from './components/Organization'
+import Cooperate from './components/Cooperate'
+import Aggrement from './components/Aggrement'
+import Tech from './components/Tech'
+import International from './components/International'
+import Investment from './components/Investment'
+import Industry from './components/Industry'
+import Expert from './components/Expert'
+import Pioneer from './components/Pioneer'
+import Foreign from './components/Foreign'
 const routes = [{
     path: '/',
     component: Hello
@@ -19,6 +30,50 @@ const routes = [{
   {
     path: '/1',
     component: DGUSTIntroduction
+  },
+  {
+    path: '/2',
+    component: DGUSTTeam
+  },
+  {
+    path: '/3',
+    component: Organization
+  },
+  {
+    path: '/4',
+    component: Cooperate
+  },
+  {
+    path: '/5',
+    component: Aggrement
+  },
+  {
+    path: '/6',
+    component: Tech
+  },
+  {
+    path: '/7',
+    component: International
+  },
+  {
+    path: '/8',
+    component: Investment
+  },
+  {
+    path: '/9',
+    component: Industry
+  },
+  {
+    path: '/12',
+    component: Expert
+  },
+  {
+    path: '/13',
+    component: Pioneer
+  },
+  {
+    path: '/14',
+    component: Foreign
   },
   {
     path: '/16',

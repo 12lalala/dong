@@ -270,6 +270,7 @@ export default {
   float: left;
   overflow: hidden;
   margin-top: 6px;
+  width: 30%;
 }
 .content .content-sub .sub1 h5 {
   font-size: 1.333em;
@@ -279,11 +280,10 @@ export default {
   margin-top: 0px;
 }
 .content .content-sub .sub2 {
-  float: right;
+  float: left;
   line-height: 2.2;
   overflow: hidden;
-  max-width: 500px;
-  margin-right: 50px;
+  max-width: 700px;
 }
 .content .content-sub .sub2 p {
   margin-top: 0;

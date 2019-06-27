@@ -16,6 +16,13 @@ import DGUSTTeam from './components/DGUSTTeam'
 import Organization from './components/Organization'
 import Cooperate from './components/Cooperate'
 import Aggrement from './components/Aggrement'
+import Tech from './components/Tech'
+import International from './components/International'
+import Investment from './components/Investment'
+import Industry from './components/Industry'
+import Expert from './components/Expert'
+import Pioneer from './components/Pioneer'
+import Foreign from './components/Foreign'
 const routes = [{
     path: '/',
     component: Hello
@@ -39,6 +46,34 @@ const routes = [{
   {
     path: '/5',
     component: Aggrement
+  },
+  {
+    path: '/6',
+    component: Tech
+  },
+  {
+    path: '/7',
+    component: International
+  },
+  {
+    path: '/8',
+    component: Investment
+  },
+  {
+    path: '/9',
+    component: Industry
+  },
+  {
+    path: '/12',
+    component: Expert
+  },
+  {
+    path: '/13',
+    component: Pioneer
+  },
+  {
+    path: '/14',
+    component: Foreign
   },
   {
     path: '/16',

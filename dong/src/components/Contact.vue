@@ -42,8 +42,6 @@
 </template>
 
 <script>
-import { AMapManager } from "vue-amap"
-let amapManager = new AMapManager();
 export default {
   name: "Contact",
   data () {

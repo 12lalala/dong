@@ -21,6 +21,7 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Backtotop from './components/Backtotop'
+
 export default {
   name: 'app',
   components: {

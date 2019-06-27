@@ -7,33 +7,65 @@
         <dd></dd>
       </dl>
     </div>
+    <div class="breadcrumb">
+      <el-breadcrumb separator-class="el-icon-arrow-right">
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/16' }">联系我们</el-breadcrumb-item>
+      </el-breadcrumb>
+    </div>
     <div class="content">
       <h3>联系我们</h3>
+      <div class="map">
+        <div class="amap-wrapper">
+          <el-amap class="amap-box"
+                   vid="map"
+                   :zoom="zoom"
+                   :center="center">
+          </el-amap>
+        </div>
+      </div>
       <p class="description1">东莞理工学院国际创新研究院</p>
       <p class="description2">
-        地址：
+        地址：{{address}}
         <br>
-        电话:
+        电话: {{tel}}
         <br>
-        传真:
+        传真: {{fax}}
         <br>
         简历投递邮箱：
-        <a href=""></a>
+        <el-link :href="email.url"
+                 :underline="false"
+                 target="_blank">{{email.email}}</el-link>
       </p>
     </div>
   </div>
 </template>
 
 <script>
+import { AMapManager } from "vue-amap"
+let amapManager = new AMapManager();
 export default {
+  name: "Contact",
   data () {
     return {
-      img: require("../assets/contact.png")
+      zoom: 16,
+      center: [121.406051, 31.179695],
+      img: require("../assets/contact.png"),
+      address: "",
+      tel: "",
+      fax: "",
+      email: {
+        email: "",
+        url: "",
+      },
     }
   }
 }
 </script>
 <style scoped>
+.map {
+  height: 300px;
+}
 .banner {
   height: 380px;
   background-image: url("../assets/contact.png");
@@ -90,6 +122,12 @@ export default {
   line-height: 2;
   margin-bottom: 6px;
   margin-top: 8px;
+}
+/* 面包屑 */
+.breadcrumb {
+  width: 1200px;
+  overflow: hidden;
+  margin: 20px auto;
 }
 </style>
 

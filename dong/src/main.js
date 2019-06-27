@@ -51,6 +51,17 @@ new Vue({
   router
 });
 
+// 引入vue-amap
+import VueAMap from 'vue-amap';
+Vue.use(VueAMap);
+
+// 初始化vue-amap
+VueAMap.initAMapApiLoader({
+  // 高德的key
+  key: '	babc79e9db5dae067346e8058d8ef61d',
+  // 插件集合 （插件按需引入）
+  plugin: ['AMap.Autocomplete', 'AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType', 'AMap.PolyEditor', 'AMap.CircleEditor']
+});
 
 // // 注册组件
 // import Header from './components/Header.vue'

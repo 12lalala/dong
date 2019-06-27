@@ -12,8 +12,7 @@
       <el-menu :default-active="activeIndex"
                class="el-menu-demo"
                mode="horizontal"
-               router="true"
-               @select="handleSelect"
+               router
                text-color="#000000">
         <el-menu-item index="/">首页</el-menu-item>
         <el-submenu index="2">

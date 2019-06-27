@@ -50,7 +50,7 @@ export default {
   max-width: 1200px;
   margin: 0 auto;
   padding: 15px;
-  font-size: 1.12em;
+  font-size: 14px;
 }
 .link {
   color: #ffffff;

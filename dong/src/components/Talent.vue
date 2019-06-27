@@ -40,7 +40,7 @@
           <p>
             <strong>简历投递邮箱:</strong>
             <br>
-            <el-link href="https://www.baidu.com"
+            <el-link href="mailto:lei.deng@cybernaut.com.cn"
                      target="_blank">lei.deng@cybernaut.com.cn</el-link>
           </p>
         </div>
@@ -79,7 +79,7 @@
           <p>
             <strong>简历投递邮箱:</strong>
             <br>
-            <el-link href="https://www.baidu.com"
+            <el-link href="mailto:lei.deng@cybernaut.com.cn"
                      target="_blank">lei.deng@cybernaut.com.cn</el-link>
           </p>
         </div>
@@ -114,7 +114,7 @@
           <p>
             <strong>简历投递邮箱:</strong>
             <br>
-            <el-link href="https://www.baidu.com"
+            <el-link href="mailto:lei.deng@cybernaut.com.cn"
                      target="_blank">lei.deng@cybernaut.com.cn</el-link>
           </p>
         </div>
@@ -159,7 +159,7 @@
           <p>
             <strong>简历投递邮箱:</strong>
             <br>
-            <el-link href="https://www.baidu.com"
+            <el-link href="mailto:lei.deng@cybernaut.com.cn"
                      target="_blank">lei.deng@cybernaut.com.cn</el-link>
           </p>
         </div>
@@ -196,7 +196,7 @@
           <p>
             <strong>简历投递邮箱:</strong>
             <br>
-            <el-link href="https://www.baidu.com"
+            <el-link href="mailto:lei.deng@cybernaut.com.cn"
                      target="_blank">lei.deng@cybernaut.com.cn</el-link>
           </p>
         </div>

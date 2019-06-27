@@ -3,7 +3,7 @@
     <div class="banner">
       <dl>
         <dd></dd>
-        <dt>人才招聘</dt>
+        <dt>学校简介</dt>
         <dd></dd>
       </dl>
     </div>
@@ -23,27 +23,26 @@
       <div class="l">
         <h3>关于我们</h3>
         <el-divider></el-divider>
-        <el-menu default-active="2"
+        <el-menu default-active="/1"
                  class="el-menu-vertical-demo"
-                 @open="handleOpen"
-                 @close="handleClose">
-          <el-menu-item index="1">
+                 router>
+          <el-menu-item index="/1">
             <span slot="title">DGUST简介</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="2">
+          <el-menu-item index="/2">
             <span slot="title">DGUST团队</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="3">
+          <el-menu-item index="/3">
             <span slot="title">组织构架</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="4">
+          <el-menu-item index="/4">
             <span slot="title">合作伙伴</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="5">
+          <el-menu-item index="/5">
             <span slot="title">协议伙伴</span>
             <i class="el-icon-right"></i>
           </el-menu-item>

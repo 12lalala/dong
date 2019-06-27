@@ -1,5 +1,6 @@
 <template>
   <div>
+    <el-backtop target=".page-component__scroll .el-scrollbar__wrap"></el-backtop>
     <!-- 跑马灯 -->
     <div class="carousel">
       <el-carousel :interval="5000"
@@ -94,9 +95,7 @@
                         :src="aboutimage"
                         :fit="fit"></el-image>
               <div>
-                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;浙江大学国际创新研究院创是浙江大学下设的民办非企业研究院，
-                  由赛伯乐投资集团筹资发起成立。作为国际性的创新创业平台，依托浙江大学和赛
-                  伯乐的资源及资金优势，研究院以“锻造国际产学研合作创新链、助推创新生态营造与区域经济发展……</span><br>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{abouttxt}}</span><br>
                 <el-link href="/1"
                          :underline="false"
                          type="primary"
@@ -124,7 +123,7 @@
               <div class="link"
                    v-for="(title,index) in titles"
                    :key="index">
-                <el-link href="https://element.eleme.io"
+                <el-link :href="title.url"
                          target="_blank"
                          :underline="false"
                          icon="el-icon-right">{{title.title}}</el-link>
@@ -161,10 +160,11 @@ export default {
         { url: require("../assets/dynamic/3.jpg") },
         { url: require("../assets/dynamic/4.jpg") },
       ],
+      abouttxt: "浙江大学国际创新研究院创是浙江大学下设的民办非企业研究院，由赛伯乐投资集团筹资发起成立。作为国际性的创新创业平台，依托浙江大学和赛伯乐的资源及资金优势，研究院以“锻造国际产学研合作创新链、助推创新生态营造与区域经济发展……",
       titles: [
-        { title: "浙江大学国际创新研究院和瑞士洛桑大学高等经济商学院签订...", time: "2019-04-02" },
-        { title: "中瑞企业创新发展对话—中欧对话制高点 瑞士洛桑中国经济金...", time: "2019-02-18" },
-        { title: "“创新•匠心”中日大学携手资本探讨科技创新 暨 浙江大学国...", time: "2019-02-15" },
+        { title: "浙江大学国际创新研究院和瑞士洛桑大学高等经济商学院签订...", time: "2019-04-02", url: "" },
+        { title: "中瑞企业创新发展对话—中欧对话制高点 瑞士洛桑中国经济金...", time: "2019-02-18", url: "" },
+        { title: "“创新•匠心”中日大学携手资本探讨科技创新 暨 浙江大学国...", time: "2019-02-15", url: "" },
       ],
       aboutimage: require("../assets/about_pic.png")
     }

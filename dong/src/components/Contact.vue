@@ -15,12 +15,16 @@
     </div>
     <div class="content">
       <h3>联系我们</h3>
+      <br>
       <div class="map">
         <div class="amap-wrapper">
           <el-amap class="amap-box"
                    vid="map"
+                   resizeEnable="true"
                    :zoom="zoom"
                    :center="center">
+            <el-amap-marker vid="component-marker"
+                            :position="position"></el-amap-marker>
           </el-amap>
         </div>
       </div>
@@ -47,7 +51,8 @@ export default {
   data () {
     return {
       zoom: 16,
-      center: [121.406051, 31.179695],
+      center: [113.875019, 22.902542],
+      position: [113.875019, 22.902542],
       img: require("../assets/contact.png"),
       address: "",
       tel: "",
@@ -62,7 +67,11 @@ export default {
 </script>
 <style scoped>
 .map {
-  height: 300px;
+  height: 450px;
+  overflow: hidden;
+}
+.amap-wrapper {
+  height: 450px;
 }
 .banner {
   height: 380px;
@@ -96,7 +105,6 @@ export default {
 .content {
   max-width: 1200px;
   padding: 20.3px;
-  height: 600px;
   margin: 0 auto;
   background-color: #fff;
   margin-bottom: 50px;
@@ -123,7 +131,7 @@ export default {
 }
 /* 面包屑 */
 .breadcrumb {
-  width: 1200px;
+  max-width: 1200px;
   overflow: hidden;
   margin: 20px auto;
 }

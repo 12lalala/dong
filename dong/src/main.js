@@ -3,9 +3,22 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
 
-import VueRouter from 'vue-router'
+import VueRouter from 'vue-router';
+import VueAMap from 'vue-amap';
 
 Vue.use(VueRouter)
+
+Vue.use(ElementUI);
+
+Vue.use(VueAMap);
+
+
+VueAMap.initAMapApiLoader({
+  key: '	babc79e9db5dae067346e8058d8ef61d',
+  plugin: ['AMap.Autocomplete', 'AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType', 'AMap.PolyEditor', 'AMap.CircleEditor']
+});
+
+
 //定义路由表
 import Hello from './components/Hello'
 import n404 from './components/404'
@@ -93,8 +106,6 @@ const routes = [{
   }
 ]
 
-Vue.use(ElementUI);
-
 const router = new VueRouter({
   routes,
   mode: 'history'
@@ -105,26 +116,3 @@ new Vue({
   render: h => h(App),
   router
 });
-
-// 引入vue-amap
-import VueAMap from 'vue-amap';
-Vue.use(VueAMap);
-
-// 初始化vue-amap
-VueAMap.initAMapApiLoader({
-  // 高德的key
-  key: '	babc79e9db5dae067346e8058d8ef61d',
-  // 插件集合 （插件按需引入）
-  plugin: ['AMap.Autocomplete', 'AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType', 'AMap.PolyEditor', 'AMap.CircleEditor']
-});
-
-// // 注册组件
-// import Header from './components/Header.vue'
-// Vue.component('main-header', {
-//   template: Header,
-//   data: function () {
-//     return {
-//       activeIndex: "/",
-//     }
-//   }
-// })

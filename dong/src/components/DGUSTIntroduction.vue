@@ -23,10 +23,9 @@
       <div class="l">
         <h3>关于我们</h3>
         <el-divider></el-divider>
-        <el-menu default-active="2"
+        <el-menu default-active="/1"
                  class="el-menu-vertical-demo"
-                 @open="handleOpen"
-                 @close="handleClose">
+                 router>
           <el-menu-item index="1">
             <span slot="title">学校简介</span>
             <i class="el-icon-right"></i>
@@ -35,15 +34,15 @@
             <span slot="title">学校团队</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="3">
+          <el-menu-item index="/3">
             <span slot="title">组织构架</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="4">
+          <el-menu-item index="/4">
             <span slot="title">合作伙伴</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="5">
+          <el-menu-item index="/5">
             <span slot="title">协议伙伴</span>
             <i class="el-icon-right"></i>
           </el-menu-item>

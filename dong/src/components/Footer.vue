@@ -43,12 +43,14 @@ export default {
 .footer {
   width: 100%;
   background: #007cf8f3;
-  height: 80px;
+  height: 100px;
   overflow: hidden;
 }
 .content {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 15px;
+  font-size: 14px;
 }
 .link {
   color: #ffffff;

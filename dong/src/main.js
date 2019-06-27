@@ -7,11 +7,15 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 //定义路由表
-import Hello from './components/Hello.vue'
+import Hello from './components/Hello'
 import n404 from './components/404'
-import Contact from './components/Contact.vue'
-import Talent from './components/Talent.vue'
+import Contact from './components/Contact'
+import Talent from './components/Talent'
 import DGUSTIntroduction from './components/DGUSTIntroduction'
+import DGUSTTeam from './components/DGUSTTeam'
+import Organization from './components/Organization'
+import Cooperate from './components/Cooperate'
+import Aggrement from './components/Aggrement'
 const routes = [{
     path: '/',
     component: Hello
@@ -19,6 +23,22 @@ const routes = [{
   {
     path: '/1',
     component: DGUSTIntroduction
+  },
+  {
+    path: '/2',
+    component: DGUSTTeam
+  },
+  {
+    path: '/3',
+    component: Organization
+  },
+  {
+    path: '/4',
+    component: Cooperate
+  },
+  {
+    path: '/5',
+    component: Aggrement
   },
   {
     path: '/16',

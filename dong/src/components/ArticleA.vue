@@ -10,7 +10,7 @@
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/11' }">通知公告</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/Announcement' }">通知公告</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">
@@ -31,14 +31,14 @@
       <div class="l">
         <h3>新闻动态</h3>
         <el-divider></el-divider>
-        <el-menu default-active="/11"
+        <el-menu default-active="/Announcement"
                  class="el-menu-vertical-demo"
                  router>
-          <el-menu-item index="/10">
+          <el-menu-item index="/News">
             <span slot="title">最新动态</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="/11">
+          <el-menu-item index="/Announcement">
             <span slot="title">通知公告</span>
             <i class="el-icon-right"></i>
           </el-menu-item>

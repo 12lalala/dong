@@ -10,7 +10,7 @@
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/3' }">组织架构</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/Organization' }">组织架构</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">
@@ -22,26 +22,26 @@
       <div class="l">
         <h3>关于我们</h3>
         <el-divider></el-divider>
-        <el-menu default-active="/3"
+        <el-menu default-active="/Organization"
                  class="el-menu-vertical-demo"
                  router>
-          <el-menu-item index="/1">
+          <el-menu-item index="/DGUSTIntroduction">
             <span slot="title">学校简介</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="/2">
+          <el-menu-item index="/DGUSTTeam">
             <span slot="title">学校团队</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="/3">
+          <el-menu-item index="/Organization">
             <span slot="title">组织构架</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="/4">
+          <el-menu-item index="/Cooperate">
             <span slot="title">合作伙伴</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="/5">
+          <el-menu-item index="/Aggrement">
             <span slot="title">协议伙伴</span>
             <i class="el-icon-right"></i>
           </el-menu-item>

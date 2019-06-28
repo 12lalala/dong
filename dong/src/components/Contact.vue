@@ -10,7 +10,7 @@
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/16' }">联系我们</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/Contact' }">联系我们</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">

@@ -47,69 +47,69 @@ const routes = [{
     component: Hello
   },
   {
-    path: '/1',
+    path: '/DGUSTIntroduction',
     component: DGUSTIntroduction
-  },
+  }, //1
   {
-    path: '/2',
+    path: '/DGUSTTeam',
     component: DGUSTTeam
-  },
+  }, //2
   {
-    path: '/3',
+    path: '/Organization',
     component: Organization
-  },
+  }, //3
   {
-    path: '/4',
+    path: '/Cooperate',
     component: Cooperate
-  },
+  }, //4
   {
-    path: '/5',
+    path: '/Aggrement',
     component: Aggrement
-  },
+  }, //5
   {
-    path: '/6',
+    path: '/Tech',
     component: Tech
-  },
+  }, //6
   {
-    path: '/7',
+    path: '/International',
     component: International
-  },
+  }, //7
   {
-    path: '/8',
+    path: '/Investment',
     component: Investment
-  },
+  }, //8
   {
-    path: '/9',
+    path: '/Industry',
     component: Industry
-  },
+  }, //9
   {
-    path: '/10',
+    path: '/News',
     component: News
-  },
+  }, //10
   {
-    path: '/11',
+    path: '/Announcement',
     component: Announcement
-  },
+  }, //11
   {
-    path: '/12',
+    path: '/Expert',
     component: Expert
-  },
+  }, //12
   {
-    path: '/13',
+    path: '/Pioneer',
     component: Pioneer
-  },
+  }, //13
   {
-    path: '/14',
+    path: '/Foreign',
     component: Foreign
-  },
+  }, //14
   {
-    path: '/16',
+    path: '/Contact',
     component: Contact
-  },
+  }, //16
   {
-    path: '/15',
+    path: '/Talent',
     component: Talent
-  },
+  }, //15
   {
     path: '/article/news/:id',
     component: ArticleN,
@@ -126,10 +126,7 @@ const routes = [{
     path: '/404',
     component: n404
   },
-  {
-    path: '*', // 此处需特别注意至于最底部
-    redirect: '/404'
-  }
+
 ]
 
 const router = new VueRouter({

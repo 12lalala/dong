@@ -49,9 +49,7 @@
         <h3>智库专家</h3>
         <el-divider></el-divider>
         <el-menu default-active="2"
-                 class="el-menu-vertical-demo"
-                 @open="handleOpen"
-                 @close="handleClose">
+                 class="el-menu-vertical-demo">
           <el-menu-item index="1">
             <span slot="title">专家团队</span>
             <i class="el-icon-right"></i>

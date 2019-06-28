@@ -54,6 +54,5 @@ export default {
   min-height: calc(100vh - 105px);
   max-width: 1920px;
 }
-
 /* 950px */
 </style>

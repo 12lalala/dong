@@ -6,6 +6,8 @@ import App from './App.vue';
 import VueRouter from 'vue-router';
 import VueAMap from 'vue-amap';
 
+import './assets/css/override-element-ui.css'
+
 Vue.use(VueRouter)
 
 Vue.use(ElementUI);
@@ -36,6 +38,10 @@ import Industry from './components/Industry'
 import Expert from './components/Expert'
 import Pioneer from './components/Pioneer'
 import Foreign from './components/Foreign'
+import News from './components/News'
+import Announcement from './components/Announcement'
+import ArticleA from './components/ArticleA'
+import ArticleN from './components/ArticleN'
 const routes = [{
     path: '/',
     component: Hello
@@ -77,6 +83,14 @@ const routes = [{
     component: Industry
   },
   {
+    path: '/10/',
+    component: News
+  },
+  {
+    path: '/11',
+    component: Announcement
+  },
+  {
     path: '/12',
     component: Expert
   },
@@ -95,6 +109,18 @@ const routes = [{
   {
     path: '/15',
     component: Talent
+  },
+  {
+    path: '/article/news/:id',
+    component: ArticleN,
+  },
+  {
+    path: '/article/announcement/:id',
+    component: ArticleA,
+  },
+  {
+    path: '/article',
+    component: News,
   },
   {
     path: '/404',

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <el-backtop target=".page-component__scroll .el-scrollbar__wrap"></el-backtop>
     <!-- 跑马灯 -->
     <div class="carousel">
       <el-carousel :interval="5000"

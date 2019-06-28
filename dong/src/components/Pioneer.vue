@@ -11,9 +11,38 @@
       <div class="r">
         <h1>创业导师</h1>
         <div class="content-sub">
-          <span class="1">安玉贤</span>
-          <el-divider direction="vertical"></el-divider>
-          <span class="2">SABIC（沙特基础工业公司）中国研发中心总监</span>
+          <dl>
+            <dt>安玉贤</dt>
+            <dd>SABIC（沙特基础工业公司）中国研发中心总监</dd>
+          </dl>
+          <dl>
+            <dt>程 铭</dt>
+            <dd>3M中国研发中心总经理、副总裁</dd>
+          </dl>
+          <dl>
+            <dt>罗文中</dt>
+            <dd>霍尼韦尔中国研发中心总经理</dd>
+          </dl>
+          <dl>
+            <dt>彭培源</dt>
+            <dd>LG电子中国研发中心总经理、全球副总裁</dd>
+          </dl>
+          <dl>
+            <dt>任道远</dt>
+            <dd>VMware中国研发中心总经理</dd>
+          </dl>
+          <dl>
+            <dt>施嘉诺</dt>
+            <dd>KLA-Tencor中国研发中心总经理</dd>
+          </dl>
+          <dl>
+            <dt>王 熙</dt>
+            <dd>飞利浦中国副总裁、CTO</dd>
+          </dl>
+          <dl>
+            <dt>殷 鹏</dt>
+            <dd>雅培中国研发中心总经理</dd>
+          </dl>
         </div>
       </div>
       <div class="l">
@@ -96,8 +125,9 @@ export default {
   float: right;
   margin: 20.3px;
   margin-left: 30px;
-  max-width: 910px;
+  width: 65%;
   margin-top: 0px;
+  margin-right: 110px;
 }
 .content .r h1 {
   font-weight: 400;
@@ -117,6 +147,30 @@ export default {
 }
 .content .content-sub {
   overflow: hidden;
+}
+.content .content-sub dt {
+  width: 20%;
+  font-weight: normal;
+  font-size: 1.5em;
+  display: inline-block;
+  color: #333;
+  vertical-align: middle;
+  border-right: solid 1px #ddd;
+}
+.content .content-sub dd {
+  width: 72%;
+  margin-left: 6%;
+  display: inline-block;
+  vertical-align: middle;
+  color: #666;
+}
+.content .content-sub h1 {
+  float: left;
+  font-weight: 300;
+}
+.content .content-sub h3 {
+  float: left;
+  font-weight: 300;
 }
 .content .content-sub img {
   float: left;

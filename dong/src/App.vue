@@ -21,6 +21,7 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Backtotop from './components/Backtotop'
+
 export default {
   name: 'app',
   components: {
@@ -53,6 +54,5 @@ export default {
   min-height: calc(100vh - 105px);
   max-width: 1920px;
 }
-
 /* 950px */
 </style>

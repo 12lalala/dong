@@ -7,6 +7,12 @@
         <dd></dd>
       </dl>
     </div>
+    <div class="breadcrumb">
+      <el-breadcrumb separator-class="el-icon-arrow-right">
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/14' }">海外合伙</el-breadcrumb-item>
+      </el-breadcrumb>
+    </div>
     <div class="content">
       <div class="r">
         <h1>海外合伙人</h1>
@@ -27,24 +33,22 @@
       <div class="l">
         <h3>智库专家</h3>
         <el-divider></el-divider>
-        <el-menu default-active="2"
+        <el-menu default-active="/14"
                  class="el-menu-vertical-demo"
-                 @open="handleOpen"
-                 @close="handleClose">
-          <el-menu-item index="1">
+                 router>
+          <el-menu-item index="/12">
             <span slot="title">专家团队</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="2">
+          <el-menu-item index="/13">
             <span slot="title">创业导师</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="3">
+          <el-menu-item index="/14">
             <span slot="title">海外合伙人</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
         </el-menu>
-
       </div>
     </div>
   </div>
@@ -140,6 +144,12 @@ export default {
 }
 .content .content-sub .description ul {
   padding: 0;
+}
+/* 面包屑 */
+.breadcrumb {
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 20px auto;
 }
 </style>
 

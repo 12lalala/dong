@@ -7,18 +7,39 @@
         <dd></dd>
       </dl>
     </div>
+    <div class="breadcrumb">
+      <el-breadcrumb separator-class="el-icon-arrow-right">
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/16' }">联系我们</el-breadcrumb-item>
+      </el-breadcrumb>
+    </div>
     <div class="content">
       <h3>联系我们</h3>
+      <br>
+      <div class="map">
+        <div class="amap-wrapper">
+          <el-amap class="amap-box"
+                   vid="map"
+                   resizeEnable="true"
+                   :zoom="zoom"
+                   :center="center">
+            <el-amap-marker vid="component-marker"
+                            :position="position"></el-amap-marker>
+          </el-amap>
+        </div>
+      </div>
       <p class="description1">东莞理工学院国际创新研究院</p>
       <p class="description2">
-        地址：
+        地址：{{address}}
         <br>
-        电话:
+        电话: {{tel}}
         <br>
-        传真:
+        传真: {{fax}}
         <br>
         简历投递邮箱：
-        <a href=""></a>
+        <el-link :href="email.url"
+                 :underline="false"
+                 target="_blank">{{email.email}}</el-link>
       </p>
     </div>
   </div>
@@ -26,14 +47,32 @@
 
 <script>
 export default {
+  name: "Contact",
   data () {
     return {
-      img: require("../assets/contact.png")
+      zoom: 16,
+      center: [113.875019, 22.902542],
+      position: [113.875019, 22.902542],
+      img: require("../assets/contact.png"),
+      address: "",
+      tel: "",
+      fax: "",
+      email: {
+        email: "",
+        url: "",
+      },
     }
   }
 }
 </script>
 <style scoped>
+.map {
+  height: 450px;
+  overflow: hidden;
+}
+.amap-wrapper {
+  height: 450px;
+}
 .banner {
   height: 380px;
   background-image: url("../assets/contact.png");
@@ -66,7 +105,6 @@ export default {
 .content {
   max-width: 1200px;
   padding: 20.3px;
-  height: 600px;
   margin: 0 auto;
   background-color: #fff;
   margin-bottom: 50px;
@@ -90,6 +128,12 @@ export default {
   line-height: 2;
   margin-bottom: 6px;
   margin-top: 8px;
+}
+/* 面包屑 */
+.breadcrumb {
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 20px auto;
 }
 </style>
 

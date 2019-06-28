@@ -3,46 +3,43 @@
     <div class="banner">
       <dl>
         <dd></dd>
-        <dt>科创服务</dt>
+        <dt>最新动态</dt>
         <dd></dd>
       </dl>
     </div>
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/6' }">科创服务</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/10' }">最新动态</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">
       <div class="r">
-        <h1>科创服务中心</h1>
-        <p>浙江大学国际创新研究院下设科创服务中心，围绕紫金小镇、梦想小镇、未来科技城等双创平台，围绕创业教育、创业活动、创业赛事、项目孵化、孵化成功等五大板块构建全面的双创服务体系，打造双创标杆示范区，强化区域性产业规划研究。</p>
-        <br>
-        <br>
-        <el-image style="width: 853px; height: 475px"
-                  :src="url"
-                  :fit="fit"></el-image>
+        <iframe :src="src"
+                id="article"
+                name="article"
+                scrolling="no"
+                frameborder="0"
+                width="100%"
+                :height="hei + 'px'"></iframe>
+        <div class="botton">
+          <el-button type="text"
+                     @click='showall'
+                     v-show="butshow">显示全文</el-button>
+        </div>
       </div>
       <div class="l">
-        <h3>产学研</h3>
+        <h3>新闻动态</h3>
         <el-divider></el-divider>
-        <el-menu default-active="/6"
+        <el-menu default-active="/10"
                  class="el-menu-vertical-demo"
                  router>
-          <el-menu-item index="/6">
-            <span slot="title">科创服务中心</span>
+          <el-menu-item index="/10">
+            <span slot="title">最新动态</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="/7">
-            <span slot="title">国际交流中心</span>
-            <i class="el-icon-right"></i>
-          </el-menu-item>
-          <el-menu-item index="/8">
-            <span slot="title">投资孵化中心</span>
-            <i class="el-icon-right"></i>
-          </el-menu-item>
-          <el-menu-item index="/9">
-            <span slot="title">产业规划中心</span>
+          <el-menu-item index="/11">
+            <span slot="title">通知公告</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
         </el-menu>
@@ -56,16 +53,32 @@
 export default {
   data () {
     return {
-      fit: 'fill',
-      url: require("../assets/tech.png")
+      src: '/articles/News/' + this.$route.params.id + '.html',
+      hei: 500,
+      butshow: true,
+    }
+  },
+  methods: {
+    showall () {
+      var iframehei = 0;
+      try {
+        iframehei = window.frames['article'].document.body.scrollHeight;
+      } catch (e) { iframehei = 500; }
+      finally {
+        this.hei = iframehei;
+        this.butshow = false;
+      }
     }
   }
 }
 </script>
 <style scoped>
+.botton {
+  float: right;
+}
 .banner {
   height: 380px;
-  background-image: url("../assets/center.png");
+  background-image: url("../assets/contact.png");
   background-repeat: no-repeat;
   overflow: hidden;
 }
@@ -104,22 +117,11 @@ export default {
 .content .r {
   float: right;
   margin: 20.3px;
-  margin-left: 30px;
-  max-width: 910px;
+  width: 70%;
+  /* height: 488px; */
   margin-top: 0px;
 }
-.content .r h1 {
-  font-weight: 400;
-  margin: 5px;
-}
-.content .r p {
-  line-height: 2.2;
-  text-indent: 40px;
-  margin: 8px;
-}
-.content .r .title {
-  font-weight: 600;
-}
+
 .content .l {
   float: left;
   width: 200px;

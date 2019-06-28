@@ -21,7 +21,7 @@
         <span class="txt">
           联系地址:&nbsp;浙江省杭州市西湖区西园一路18号,&nbsp;浙江大学紫金众创小镇D4-4号楼&nbsp;</span>
         <span class="txt">
-          联系电话:nbsp;(+86-571)89995070&nbsp;&nbsp;传真:&nbsp;(+86-571)89995070</span>
+          联系电话:&nbsp;(+86-571)89995070&nbsp;&nbsp;传真:&nbsp;(+86-571)89995070</span>
         <br>
         <span class="txt">
           Copyright © 2017 浙江大学国际创新研究院. All Rights Reserved.</span>

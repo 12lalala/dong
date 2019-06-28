@@ -7,6 +7,12 @@
         <dd></dd>
       </dl>
     </div>
+    <div class="breadcrumb">
+      <el-breadcrumb separator-class="el-icon-arrow-right">
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/13' }">创业导师</el-breadcrumb-item>
+      </el-breadcrumb>
+    </div>
     <div class="content">
       <div class="r">
         <h1>创业导师</h1>
@@ -16,7 +22,7 @@
             <dd>SABIC（沙特基础工业公司）中国研发中心总监</dd>
           </dl>
           <dl>
-            <dt>程 铭</dt>
+            <dt>程&nbsp;&nbsp;&nbsp;铭</dt>
             <dd>3M中国研发中心总经理、副总裁</dd>
           </dl>
           <dl>
@@ -36,11 +42,11 @@
             <dd>KLA-Tencor中国研发中心总经理</dd>
           </dl>
           <dl>
-            <dt>王 熙</dt>
+            <dt>王&nbsp;&nbsp;&nbsp;熙</dt>
             <dd>飞利浦中国副总裁、CTO</dd>
           </dl>
           <dl>
-            <dt>殷 鹏</dt>
+            <dt>殷&nbsp;&nbsp;&nbsp;鹏</dt>
             <dd>雅培中国研发中心总经理</dd>
           </dl>
         </div>
@@ -48,22 +54,22 @@
       <div class="l">
         <h3>智库专家</h3>
         <el-divider></el-divider>
-        <el-menu default-active="2"
-                 class="el-menu-vertical-demo">
-          <el-menu-item index="1">
+        <el-menu default-active="/13"
+                 class="el-menu-vertical-demo"
+                 router>
+          <el-menu-item index="/12">
             <span slot="title">专家团队</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="2">
+          <el-menu-item index="/13">
             <span slot="title">创业导师</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="3">
+          <el-menu-item index="/14">
             <span slot="title">海外合伙人</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
         </el-menu>
-
       </div>
     </div>
   </div>
@@ -184,6 +190,12 @@ export default {
 }
 .content .content-sub .description ul {
   padding: 0;
+}
+/* 面包屑 */
+.breadcrumb {
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 20px auto;
 }
 </style>
 

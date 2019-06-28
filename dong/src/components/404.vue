@@ -12,6 +12,7 @@ export default {
   name: "404",
   data () {
     return {
+      fit: "fill",
       activeIndex: "/404",
       img: require('../assets/404_2.png')
     }

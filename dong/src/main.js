@@ -3,9 +3,24 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
 
-import VueRouter from 'vue-router'
+import VueRouter from 'vue-router';
+import VueAMap from 'vue-amap';
+
+import './assets/css/override-element-ui.css'
 
 Vue.use(VueRouter)
+
+Vue.use(ElementUI);
+
+Vue.use(VueAMap);
+
+
+VueAMap.initAMapApiLoader({
+  key: '	babc79e9db5dae067346e8058d8ef61d',
+  plugin: ['AMap.Autocomplete', 'AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType', 'AMap.PolyEditor', 'AMap.CircleEditor']
+});
+
+
 //定义路由表
 import Hello from './components/Hello'
 import n404 from './components/404'
@@ -23,6 +38,10 @@ import Industry from './components/Industry'
 import Expert from './components/Expert'
 import Pioneer from './components/Pioneer'
 import Foreign from './components/Foreign'
+import News from './components/News'
+import Announcement from './components/Announcement'
+import ArticleA from './components/ArticleA'
+import ArticleN from './components/ArticleN'
 const routes = [{
     path: '/',
     component: Hello
@@ -64,6 +83,14 @@ const routes = [{
     component: Industry
   },
   {
+    path: '/10',
+    component: News
+  },
+  {
+    path: '/11',
+    component: Announcement
+  },
+  {
     path: '/12',
     component: Expert
   },
@@ -84,6 +111,18 @@ const routes = [{
     component: Talent
   },
   {
+    path: '/article/news/:id',
+    component: ArticleN,
+  },
+  {
+    path: '/article/announcement/:id',
+    component: ArticleA,
+  },
+  {
+    path: '/article',
+    component: News,
+  },
+  {
     path: '/404',
     component: n404
   },
@@ -92,8 +131,6 @@ const routes = [{
     redirect: '/404'
   }
 ]
-
-Vue.use(ElementUI);
 
 const router = new VueRouter({
   routes,
@@ -105,15 +142,3 @@ new Vue({
   render: h => h(App),
   router
 });
-
-
-// // 注册组件
-// import Header from './components/Header.vue'
-// Vue.component('main-header', {
-//   template: Header,
-//   data: function () {
-//     return {
-//       activeIndex: "/",
-//     }
-//   }
-// })

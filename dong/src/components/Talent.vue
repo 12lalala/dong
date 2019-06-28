@@ -275,7 +275,7 @@ export default {
 .content .content-sub .sub1 h5 {
   font-size: 1.333em;
   font-weight: normal;
-  color: #06308d;
+  color: #409eff;
   margin-bottom: 20px;
   margin-top: 0px;
 }

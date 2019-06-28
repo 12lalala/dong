@@ -1,6 +1,5 @@
 <template>
   <div>
-    <el-backtop target=".page-component__scroll .el-scrollbar__wrap"></el-backtop>
     <!-- 跑马灯 -->
     <div class="carousel">
       <el-carousel :interval="5000"
@@ -166,7 +165,8 @@ export default {
         { title: "中瑞企业创新发展对话—中欧对话制高点 瑞士洛桑中国经济金...", time: "2019-02-18", url: "" },
         { title: "“创新•匠心”中日大学携手资本探讨科技创新 暨 浙江大学国...", time: "2019-02-15", url: "" },
       ],
-      aboutimage: require("../assets/about_pic.png")
+      aboutimage: require("../assets/about_pic.png"),
+      fit: "fill",
     }
   },
   methods: {

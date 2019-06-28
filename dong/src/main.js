@@ -1,10 +1,10 @@
-import Vue from 'vue';
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-import App from './App.vue';
+import Vue from 'vue'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+import App from './App.vue'
 
-import VueRouter from 'vue-router';
-import VueAMap from 'vue-amap';
+import VueRouter from 'vue-router'
+import VueAMap from 'vue-amap'
 
 import './assets/css/override-element-ui.css'
 

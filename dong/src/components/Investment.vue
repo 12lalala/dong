@@ -7,6 +7,12 @@
         <dd></dd>
       </dl>
     </div>
+    <div class="breadcrumb">
+      <el-breadcrumb separator-class="el-icon-arrow-right">
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/8' }">投资孵化</el-breadcrumb-item>
+      </el-breadcrumb>
+    </div>
     <div class="content">
       <div class="r">
         <h1>投资孵化中心</h1>
@@ -20,27 +26,26 @@
       <div class="l">
         <h3>产学研</h3>
         <el-divider></el-divider>
-        <el-menu default-active="/1"
+        <el-menu default-active="/8"
                  class="el-menu-vertical-demo"
                  router>
-          <el-menu-item index="1">
+          <el-menu-item index="/6">
             <span slot="title">科创服务中心</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="2">
+          <el-menu-item index="/7">
             <span slot="title">国际交流中心</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="/3">
+          <el-menu-item index="/8">
             <span slot="title">投资孵化中心</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="/4">
+          <el-menu-item index="/9">
             <span slot="title">产业规划中心</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
         </el-menu>
-
       </div>
     </div>
   </div>
@@ -125,5 +130,10 @@ export default {
   margin-top: 10px;
   margin-bottom: 0;
 }
+/* 面包屑 */
+.breadcrumb {
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 20px auto;
+}
 </style>
-

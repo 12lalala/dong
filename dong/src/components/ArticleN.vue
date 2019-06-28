@@ -7,6 +7,12 @@
         <dd></dd>
       </dl>
     </div>
+    <div class="breadcrumb">
+      <el-breadcrumb separator-class="el-icon-arrow-right">
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/10' }">最新动态</el-breadcrumb-item>
+      </el-breadcrumb>
+    </div>
     <div class="content">
       <div class="r">
         <iframe :src="src"
@@ -25,15 +31,14 @@
       <div class="l">
         <h3>新闻动态</h3>
         <el-divider></el-divider>
-        <el-menu default-active="2"
+        <el-menu default-active="/10"
                  class="el-menu-vertical-demo"
-                 @open="handleOpen"
-                 @close="handleClose">
-          <el-menu-item index="1">
-            <span slot="title">新闻动态</span>
+                 router>
+          <el-menu-item index="/10">
+            <span slot="title">最新动态</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="2">
+          <el-menu-item index="/11">
             <span slot="title">通知公告</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
@@ -48,7 +53,6 @@
 export default {
   data () {
     return {
-      fit: "fill",
       src: '/articles/News/' + this.$route.params.id + '.html',
       hei: 500,
       butshow: true,
@@ -65,9 +69,6 @@ export default {
         this.butshow = false;
       }
     }
-  },
-  mounted () {
-    this.setHei()
   }
 }
 </script>
@@ -132,5 +133,10 @@ export default {
   margin-top: 10px;
   margin-bottom: 0;
 }
+/* 面包屑 */
+.breadcrumb {
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 20px auto;
+}
 </style>
-

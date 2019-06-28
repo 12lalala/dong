@@ -3,9 +3,15 @@
     <div class="banner">
       <dl>
         <dd></dd>
-        <dt>最新动态</dt>
+        <dt>通知公告</dt>
         <dd></dd>
       </dl>
+    </div>
+    <div class="breadcrumb">
+      <el-breadcrumb separator-class="el-icon-arrow-right">
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/11' }">通知公告</el-breadcrumb-item>
+      </el-breadcrumb>
     </div>
     <div class="content">
       <div class="r">
@@ -37,15 +43,14 @@
       <div class="l">
         <h3>新闻动态</h3>
         <el-divider></el-divider>
-        <el-menu default-active="2"
+        <el-menu default-active="/11"
                  class="el-menu-vertical-demo"
-                 @open="handleOpen"
-                 @close="handleClose">
-          <el-menu-item index="1">
+                 router>
+          <el-menu-item index="10">
             <span slot="title">最新动态</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="2">
+          <el-menu-item index="/11">
             <span slot="title">通知公告</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
@@ -291,6 +296,12 @@ a {
   margin-left: 40px;
   margin-top: 10px;
   margin-bottom: 0;
+}
+/* 面包屑 */
+.breadcrumb {
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 20px auto;
 }
 </style>
 

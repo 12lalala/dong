@@ -83,7 +83,7 @@ const routes = [{
     component: Industry
   },
   {
-    path: '/10/',
+    path: '/10',
     component: News
   },
   {

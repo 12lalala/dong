@@ -59,7 +59,8 @@ export default {
   },
   methods: {
     getActiveNav (href) {
-      let key = href.split('/')[1];
+      let hrefs = href.split('//');
+      let key = hrefs[1].split('/')[1];
       this.activeIndex = "/" + key;
     }
   },

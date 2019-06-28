@@ -10,7 +10,7 @@
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/13' }">创业导师</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/Pioneer' }">创业导师</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">
@@ -54,18 +54,18 @@
       <div class="l">
         <h3>智库专家</h3>
         <el-divider></el-divider>
-        <el-menu default-active="/13"
+        <el-menu default-active="/Pioneer"
                  class="el-menu-vertical-demo"
                  router>
-          <el-menu-item index="/12">
+          <el-menu-item index="/Expert">
             <span slot="title">专家团队</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="/13">
+          <el-menu-item index="/Pioneer">
             <span slot="title">创业导师</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="/14">
+          <el-menu-item index="/Foreign">
             <span slot="title">海外合伙人</span>
             <i class="el-icon-right"></i>
           </el-menu-item>

@@ -10,7 +10,7 @@
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/9' }">产业规划</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/Industry' }">产业规划</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">
@@ -42,22 +42,22 @@
       <div class="l">
         <h3>产学研</h3>
         <el-divider></el-divider>
-        <el-menu default-active="/9"
+        <el-menu default-active="/Industry"
                  class="el-menu-vertical-demo"
                  router>
-          <el-menu-item index="/6">
+          <el-menu-item index="/Tech">
             <span slot="title">科创服务中心</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="/7">
+          <el-menu-item index="/International">
             <span slot="title">国际交流中心</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="/8">
+          <el-menu-item index="/Investment">
             <span slot="title">投资孵化中心</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="/9">
+          <el-menu-item index="/Industry">
             <span slot="title">产业规划中心</span>
             <i class="el-icon-right"></i>
           </el-menu-item>

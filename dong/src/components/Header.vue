@@ -49,6 +49,27 @@
   <!-- 页首 -->
 </template>
 
+<script>
+export default {
+  name: "Header",
+  data () {
+    return {
+      activeIndex: "/",
+    }
+  },
+  methods: {
+    getActiveNav (href) {
+      let hrefs = href.split('//');
+      let key = hrefs[1].split('/')[1];
+      this.activeIndex = "/" + key;
+    }
+  },
+  mounted () {
+    this.getActiveNav(window.location.href);
+  }
+}
+</script>
+
 <style scoped>
 .header1 {
   height: 80px;
@@ -72,14 +93,3 @@
 @media screen and (max-device-width: 830px) {
 }
 </style>
-
-<script>
-export default {
-  name: "Header",
-  data () {
-    return {
-      activeIndex: "/",
-    }
-  }
-}
-</script>

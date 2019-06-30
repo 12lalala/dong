@@ -9,9 +9,6 @@
         <router-link to="/Contact"
                      title="联系我们">联系我们</router-link>
         <el-divider direction="vertical"></el-divider>
-        <router-link to="/Cooperate"
-                     title="合作伙伴">合作伙伴</router-link>
-        <el-divider direction="vertical"></el-divider>
         <router-link to="/Talent"
                      title="人才招聘">人才招聘</router-link>
         <el-divider direction="vertical"></el-divider>
@@ -19,12 +16,12 @@
                      title="返回首页">返回首页</router-link>
         <br>
         <span class="txt">
-          联系地址:&nbsp;浙江省杭州市西湖区西园一路18号,&nbsp;浙江大学紫金众创小镇D4-4号楼&nbsp;</span>
+          联系地址:&nbsp;广东省东莞市松山湖高新区</span>
         <span class="txt">
           联系电话:&nbsp;(+86-571)89995070&nbsp;&nbsp;传真:&nbsp;(+86-571)89995070</span>
         <br>
         <span class="txt">
-          Copyright © 2017 浙江大学国际创新研究院. All Rights Reserved.</span>
+          Copyright © 2017 东莞理工学院国际合作创新区. All Rights Reserved.</span>
       </div>
     </div>
   </div>

@@ -50,9 +50,6 @@ import Tech from './components/Tech'
 import International from './components/International'
 import Investment from './components/Investment'
 import Industry from './components/Industry'
-import Expert from './components/Expert'
-import Pioneer from './components/Pioneer'
-import Foreign from './components/Foreign'
 import News from './components/News'
 import Announcement from './components/Announcement'
 import ArticleA from './components/ArticleA'
@@ -105,18 +102,6 @@ const routes = [{
     path: '/Announcement',
     component: Announcement
   }, //11
-  {
-    path: '/Expert',
-    component: Expert
-  }, //12
-  {
-    path: '/Pioneer',
-    component: Pioneer
-  }, //13
-  {
-    path: '/Foreign',
-    component: Foreign
-  }, //14
   {
     path: '/Contact',
     component: Contact

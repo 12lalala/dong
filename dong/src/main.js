@@ -2,6 +2,10 @@ import Vue from 'vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
+// 引入cookies
+import Cookies from 'js-cookie'
+
+
 // 国际化
 // 引入 vue-i18n
 import i18n from './lang'
@@ -28,7 +32,8 @@ Vue.use(i18n)
 // Vue.locale('zh-cn', zhLocale)
 // Vue.locale('en', enLocale)
 
-
+// cookies
+Vue.use(Cookies)
 // 初始化地图
 VueAMap.initAMapApiLoader({
   key: '	babc79e9db5dae067346e8058d8ef61d',

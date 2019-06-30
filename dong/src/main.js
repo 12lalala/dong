@@ -41,11 +41,11 @@ import Hello from './components/Hello'
 import n404 from './components/404'
 import Contact from './components/Contact'
 import Talent from './components/Talent'
-import DGUSTIntroduction from './components/DGUSTIntroduction'
-import DGUSTTeam from './components/DGUSTTeam'
+import IICIntroduction from './components/IICIntroduction'
+// import DGUSTTeam from './components/DGUSTTeam'
 import Organization from './components/Organization'
-import Cooperate from './components/Cooperate'
-import Aggrement from './components/Aggrement'
+// import Cooperate from './components/Cooperate'
+// import Aggrement from './components/Aggrement'
 import Tech from './components/Tech'
 import International from './components/International'
 import Investment from './components/Investment'
@@ -59,25 +59,13 @@ const routes = [{
     component: Hello
   },
   {
-    path: '/DGUSTIntroduction',
-    component: DGUSTIntroduction
+    path: '/IICIntroduction',
+    component: IICIntroduction
   }, //1
-  {
-    path: '/DGUSTTeam',
-    component: DGUSTTeam
-  }, //2
   {
     path: '/Organization',
     component: Organization
   }, //3
-  {
-    path: '/Cooperate',
-    component: Cooperate
-  }, //4
-  {
-    path: '/Aggrement',
-    component: Aggrement
-  }, //5
   {
     path: '/Tech',
     component: Tech

@@ -3,19 +3,20 @@
     <div class="banner">
       <dl>
         <dd></dd>
-        <dt>科创服务</dt>
+        <dt>人才培养</dt>
         <dd></dd>
       </dl>
     </div>
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/Tech' }">科创服务</el-breadcrumb-item>
+        <el-breadcrumb-item>板块分区</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/Tech' }">人才培养</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">
       <div class="r">
-        <h1>科创服务中心</h1>
+        <h1>国际高端人才培育区</h1>
         <p>浙江大学国际创新研究院下设科创服务中心，围绕紫金小镇、梦想小镇、未来科技城等双创平台，围绕创业教育、创业活动、创业赛事、项目孵化、孵化成功等五大板块构建全面的双创服务体系，打造双创标杆示范区，强化区域性产业规划研究。</p>
         <br>
         <br>
@@ -24,25 +25,25 @@
                   :fit="fit"></el-image>
       </div>
       <div class="l">
-        <h3>产学研</h3>
+        <h3>板块分区</h3>
         <el-divider></el-divider>
         <el-menu default-active="/Tech"
                  class="el-menu-vertical-demo"
                  router>
           <el-menu-item index="/Tech">
-            <span slot="title">科创服务中心</span>
+            <span slot="title">国际高端人才培育区</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/International">
-            <span slot="title">国际交流中心</span>
+            <span slot="title">新工科发展引领区</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/Investment">
-            <span slot="title">投资孵化中心</span>
+            <span slot="title">科技创新示范区</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/Industry">
-            <span slot="title">产业规划中心</span>
+            <span slot="title">城市功能区域配套区</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
         </el-menu>

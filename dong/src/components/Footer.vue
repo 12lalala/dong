@@ -21,7 +21,7 @@
           联系电话:&nbsp;(+86-571)89995070&nbsp;&nbsp;传真:&nbsp;(+86-571)89995070</span>
         <br>
         <span class="txt">
-          Copyright © 2017 东莞理工学院国际合作创新区. All Rights Reserved.</span>
+          Copyright © 2019 东莞理工学院国际合作创新区. All Rights Reserved.</span>
       </div>
     </div>
   </div>

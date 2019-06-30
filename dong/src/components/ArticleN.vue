@@ -10,6 +10,7 @@
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item>新闻动态</el-breadcrumb-item>
         <el-breadcrumb-item :to="{ path: '/News' }">最新动态</el-breadcrumb-item>
       </el-breadcrumb>
     </div>

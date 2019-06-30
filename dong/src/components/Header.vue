@@ -17,11 +17,8 @@
         <el-menu-item index="/">首页</el-menu-item>
         <el-submenu index="2">
           <template slot="title">关于我们</template>
-          <el-menu-item index="/DGUSTIntroduction">IIC简介</el-menu-item>
-          <el-menu-item index="/DGUSTTeam">DGUST团队</el-menu-item>
+          <el-menu-item index="/IICIntroduction">IIC简介</el-menu-item>
           <el-menu-item index="/Organization">组织构架</el-menu-item>
-          <el-menu-item index="/Cooperate">合作伙伴</el-menu-item>
-          <el-menu-item index="/Aggrement">协议伙伴</el-menu-item>
         </el-submenu>
         <el-submenu index="3">
           <template slot="title">板块分区</template>

@@ -3,19 +3,20 @@
     <div class="banner">
       <dl>
         <dd></dd>
-        <dt>国际交流</dt>
+        <dt>发展引领</dt>
         <dd></dd>
       </dl>
     </div>
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/International' }">国际交流</el-breadcrumb-item>
+        <el-breadcrumb-item>板块分区</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/International' }">发展引领</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">
       <div class="r">
-        <h1>国际交流中心</h1>
+        <h1>新工科发展引领区</h1>
         <p>基于国际创新资源汇聚交融的优势，以美国斯坦福大学为代表的世界一流大学和以硅谷著名创新公司及孵化器平台为代表的高水平创新平台资源，面向学校和企业开展国际化的项目合作、人才交流和双创培训等业务，为浙大教职工、浙大学生、初创团队、校友企业家提供赴海外创新创业领域的项目培训管理、实习、项目实践、商事培训方案解决等服务。</p>
         <br>
         <br>
@@ -28,25 +29,25 @@
                   :fit="fit"></el-image>
       </div>
       <div class="l">
-        <h3>产学研</h3>
+        <h3>板块分区</h3>
         <el-divider></el-divider>
         <el-menu default-active="/International"
                  class="el-menu-vertical-demo"
                  router>
           <el-menu-item index="/Tech">
-            <span slot="title">科创服务中心</span>
+            <span slot="title">国际高端人才培育区</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/International">
-            <span slot="title">国际交流中心</span>
+            <span slot="title">新工科发展引领区</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/Investment">
-            <span slot="title">投资孵化中心</span>
+            <span slot="title">科技创新示范区</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/Industry">
-            <span slot="title">产业规划中心</span>
+            <span slot="title">城市功能区域配套区</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
         </el-menu>

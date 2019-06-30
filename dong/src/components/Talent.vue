@@ -7,6 +7,12 @@
         <dd></dd>
       </dl>
     </div>
+    <div class="breadcrumb">
+      <el-breadcrumb separator-class="el-icon-arrow-right">
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/Talent' }">人才招聘</el-breadcrumb-item>
+      </el-breadcrumb>
+    </div>
     <div class="content">
       <h3>人才招聘</h3>
       <div class="content-sub">
@@ -291,6 +297,12 @@ export default {
 .content .content-sub .sub2 p a {
   text-decoration: none;
   color: black;
+}
+/* 面包屑 */
+.breadcrumb {
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 20px auto;
 }
 </style>
 

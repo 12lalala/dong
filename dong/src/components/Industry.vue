@@ -3,19 +3,20 @@
     <div class="banner">
       <dl>
         <dd></dd>
-        <dt>产业规划</dt>
+        <dt>城市功能</dt>
         <dd></dd>
       </dl>
     </div>
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/Industry' }">产业规划</el-breadcrumb-item>
+        <el-breadcrumb-item>板块分区</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/Industry' }">城市功能</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">
       <div class="r">
-        <h1>产业规划中心</h1>
+        <h1>城市功能区域配套区</h1>
         <strong>科技创新·规划服务</strong>
         <p>浙江大学国际创新研究院下设区域与城市发展研究中心，专业化开展国内外区域与城市、经济与产业、社会体系、信息网络、生态环境、资源和可持续发展，区域文化和科技创新、区域协调和管理体制等多个领域和层面的研究、咨询和规划设计。通过课题研究和规划设计中的创新，探索中国区域与城市发展的理论与实践的创新之路。</p>
         <strong>产城一体·城乡统筹</strong>
@@ -40,25 +41,25 @@
                   :fit="fit"></el-image>
       </div>
       <div class="l">
-        <h3>产学研</h3>
+        <h3>板块分区</h3>
         <el-divider></el-divider>
         <el-menu default-active="/Industry"
                  class="el-menu-vertical-demo"
                  router>
           <el-menu-item index="/Tech">
-            <span slot="title">科创服务中心</span>
+            <span slot="title">国际高端人才培育区</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/International">
-            <span slot="title">国际交流中心</span>
+            <span slot="title">新工科发展引领区</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/Investment">
-            <span slot="title">投资孵化中心</span>
+            <span slot="title">科技创新示范区</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/Industry">
-            <span slot="title">产业规划中心</span>
+            <span slot="title">城市功能区域配套区</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
         </el-menu>

@@ -3,14 +3,15 @@
     <div class="banner">
       <dl>
         <dd></dd>
-        <dt>学校简介</dt>
+        <dt>IIC简介</dt>
         <dd></dd>
       </dl>
     </div>
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/DGUSTIntroduction' }">学校简介</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/IICIntroduction' }">关于我们</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/IICIntroduction' }">学校简介</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">
@@ -29,27 +30,15 @@
       <div class="l">
         <h3>关于我们</h3>
         <el-divider></el-divider>
-        <el-menu default-active="/DGUSTIntroduction"
+        <el-menu default-active="/IICIntroduction"
                  class="el-menu-vertical-demo"
                  router>
-          <el-menu-item index="/DGUSTIntroduction">
+          <el-menu-item index="/IICIntroduction">
             <span slot="title">学校简介</span>
-            <i class="el-icon-right"></i>
-          </el-menu-item>
-          <el-menu-item index="/DGUSTTeam">
-            <span slot="title">学校团队</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/Organization">
             <span slot="title">组织构架</span>
-            <i class="el-icon-right"></i>
-          </el-menu-item>
-          <el-menu-item index="/Cooperate">
-            <span slot="title">合作伙伴</span>
-            <i class="el-icon-right"></i>
-          </el-menu-item>
-          <el-menu-item index="/Aggrement">
-            <span slot="title">协议伙伴</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
         </el-menu>

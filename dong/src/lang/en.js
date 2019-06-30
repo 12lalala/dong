@@ -1,17 +1,9 @@
 export default {
-  common: {
-    confirm: 'confirm',
-    cancel: 'cancel',
-    home: 'home'
+  Hello: {
+
   },
-  header: {
-    message: 'this is a common header component'
+  Header: {
+
   },
-  footer: {
-    message: 'this is a common footer component'
-  },
-  login: {
-    login: 'login',
-    logout: 'logout'
-  }
+  url: '/en',
 }

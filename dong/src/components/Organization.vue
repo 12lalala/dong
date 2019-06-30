@@ -3,46 +3,35 @@
     <div class="banner">
       <dl>
         <dd></dd>
-        <dt>组织构架</dt>
+        <dt>{{$t('Header.h2_1')}}</dt>
         <dd></dd>
       </dl>
     </div>
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/Organization' }">组织架构</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/' }">{{$t('Header.h1')}}</el-breadcrumb-item>
+        <el-breadcrumb-item>{{$t('Header.h2')}}</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/Organization' }">{{$t('Header.h2_1')}}</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">
       <div class="r">
-        <h1>组织构架</h1>
+        <h1>{{$t('Header.h2_2')}}</h1>
         <p> <img :src="img"
                alt=""></p>
       </div>
       <div class="l">
-        <h3>关于我们</h3>
+        <h3>{{$t('Header.h2')}}</h3>
         <el-divider></el-divider>
         <el-menu default-active="/Organization"
                  class="el-menu-vertical-demo"
                  router>
-          <el-menu-item index="/DGUSTIntroduction">
-            <span slot="title">学校简介</span>
-            <i class="el-icon-right"></i>
-          </el-menu-item>
-          <el-menu-item index="/DGUSTTeam">
-            <span slot="title">学校团队</span>
+          <el-menu-item index="/IICIntroduction">
+            <span slot="title">{{$t('Header.h2_1')}}</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/Organization">
-            <span slot="title">组织构架</span>
-            <i class="el-icon-right"></i>
-          </el-menu-item>
-          <el-menu-item index="/Cooperate">
-            <span slot="title">合作伙伴</span>
-            <i class="el-icon-right"></i>
-          </el-menu-item>
-          <el-menu-item index="/Aggrement">
-            <span slot="title">协议伙伴</span>
+            <span slot="title">{{$t('Header.h2_2')}}</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
         </el-menu>

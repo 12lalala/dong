@@ -4,24 +4,23 @@
     <div class="content">
       <div class="link">
         <router-link to="/DGUSTIntroduction"
-                     title="关于我们">关于我们</router-link>
+                     :title="$t('Header.h2')">{{$t('Header.h2')}}</router-link>
         <el-divider direction="vertical"></el-divider>
         <router-link to="/Contact"
-                     title="联系我们">联系我们</router-link>
+                     :title="$t('Header.h6')">{{$t('Header.h6')}}</router-link>
         <el-divider direction="vertical"></el-divider>
         <router-link to="/Talent"
-                     title="人才招聘">人才招聘</router-link>
+                     :title="$t('Header.h5')">{{$t('Header.h5')}}</router-link>
         <el-divider direction="vertical"></el-divider>
         <router-link to="/"
-                     title="返回首页">返回首页</router-link>
+                     :title="$t('Header.h7')">{{$t('Header.h7')}}</router-link>
         <br>
         <span class="txt">
-          联系地址:&nbsp;广东省东莞市松山湖高新区</span>
+          {{$t('Footer.addr[0]')}}&nbsp;{{$t('Footer.addr[1]')}}</span>
         <span class="txt">
-          联系电话:&nbsp;(+86-571)89995070&nbsp;&nbsp;传真:&nbsp;(+86-571)89995070</span>
+          {{$t('Footer.tel[0]')}}&nbsp;{{$t('Footer.tel[1]')}}&nbsp;&nbsp;{{$t('Footer.tel[2]')}}&nbsp;{{$t('Footer.tel[3]')}}</span>
         <br>
-        <span class="txt">
-          Copyright © 2017 东莞理工学院国际合作创新区. All Rights Reserved.</span>
+        <span class="txt">{{$t('Footer.copyright')}}</span>
       </div>
     </div>
   </div>

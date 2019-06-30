@@ -3,20 +3,21 @@
     <div class="banner">
       <dl>
         <dd></dd>
-        <dt>投资孵化</dt>
+        <dt>{{$t('Hello.p3m')}}</dt>
         <dd></dd>
       </dl>
     </div>
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/Investment' }">投资孵化</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/' }">{{$t('Header.h1')}}</el-breadcrumb-item>
+        <el-breadcrumb-item>{{$t('Header.h3')}}</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/Investment' }">{{$t('Hello.p3m')}}</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">
       <div class="r">
-        <h1>投资孵化中心</h1>
-        <p>浙江大学国际创新研究院依托赛伯乐强大的投融资平台，将研究院的科技产业服务体系和赛伯乐投资的产业投资体系紧密结合，为创新科技企业特别是校友创业企业提供全方位的专业投融资服务。一方面，研究院立足于新能源领域和信息技术领域，拥有丰富的产业项目、人才、技术研发、市场等服务资源；另一方面，依托赛伯乐专业的投资服务经验，对于研究院完善投融资服务平台、提升企业投融资服务能力提供强大的知识和业务支撑。</p>
+        <h1>{{$t('Hello.p3')}}</h1>
+        <p>{{$t('Division.technology')}}</p>
         <br>
         <br>
         <el-image style="width: 853px; height: 289px"
@@ -24,25 +25,25 @@
                   :fit="fit"></el-image>
       </div>
       <div class="l">
-        <h3>产学研</h3>
+        <h3>{{$t('Header.h3')}}</h3>
         <el-divider></el-divider>
         <el-menu default-active="/Investment"
                  class="el-menu-vertical-demo"
                  router>
           <el-menu-item index="/Tech">
-            <span slot="title">科创服务中心</span>
+            <span slot="title">{{$t('Header.h3_1')}}</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/International">
-            <span slot="title">国际交流中心</span>
+            <span slot="title">{{$t('Header.h3_2')}}</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/Investment">
-            <span slot="title">投资孵化中心</span>
+            <span slot="title">{{$t('Header.h3_3')}}</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/Industry">
-            <span slot="title">产业规划中心</span>
+            <span slot="title">{{$t('Header.h3_4')}}</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
         </el-menu>

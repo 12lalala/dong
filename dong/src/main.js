@@ -18,9 +18,9 @@ import './assets/css/override-element-ui.css'
 
 Vue.use(VueRouter)
 
-Vue.use(ElementUI);
+Vue.use(ElementUI)
 
-Vue.use(VueAMap);
+Vue.use(VueAMap)
 
 // 国际化
 Vue.use(i18n)
@@ -41,11 +41,11 @@ import Hello from './components/Hello'
 import n404 from './components/404'
 import Contact from './components/Contact'
 import Talent from './components/Talent'
-import DGUSTIntroduction from './components/DGUSTIntroduction'
-import DGUSTTeam from './components/DGUSTTeam'
+import IICIntroduction from './components/IICIntroduction'
+// import DGUSTTeam from './components/DGUSTTeam'
 import Organization from './components/Organization'
-import Cooperate from './components/Cooperate'
-import Aggrement from './components/Aggrement'
+// import Cooperate from './components/Cooperate'
+// import Aggrement from './components/Aggrement'
 import Tech from './components/Tech'
 import International from './components/International'
 import Investment from './components/Investment'
@@ -59,25 +59,13 @@ const routes = [{
     component: Hello
   },
   {
-    path: '/DGUSTIntroduction',
-    component: DGUSTIntroduction
+    path: '/IICIntroduction',
+    component: IICIntroduction
   }, //1
-  {
-    path: '/DGUSTTeam',
-    component: DGUSTTeam
-  }, //2
   {
     path: '/Organization',
     component: Organization
   }, //3
-  {
-    path: '/Cooperate',
-    component: Cooperate
-  }, //4
-  {
-    path: '/Aggrement',
-    component: Aggrement
-  }, //5
   {
     path: '/Tech',
     component: Tech
@@ -126,7 +114,10 @@ const routes = [{
     path: '/404',
     component: n404
   },
-
+  {
+    path: '*',
+    component: n404
+  },
 ]
 
 const router = new VueRouter({
@@ -136,7 +127,7 @@ const router = new VueRouter({
 
 new Vue({
   el: '#app',
-  render: h => h(App),
   i18n, // 便于可以直接在组件中通过this.$i18n使用，也可以按需引用
-  router
+  router,
+  render: h => h(App),
 });

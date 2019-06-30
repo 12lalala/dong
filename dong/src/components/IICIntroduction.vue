@@ -3,44 +3,42 @@
     <div class="banner">
       <dl>
         <dd></dd>
-        <dt>{{$t('Header.h4_2')}}</dt>
+        <dt>{{$t('Header.h2_1')}}</dt>
         <dd></dd>
       </dl>
     </div>
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">{{$t('Header.h1')}}</el-breadcrumb-item>
-        <el-breadcrumb-item>{{$t('Header.h4')}}</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/Announcement' }">{{$t('Header.h4_2')}}</el-breadcrumb-item>
+        <el-breadcrumb-item>{{$t('Header.h2')}}</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/IICIntroduction' }">{{$t('Header.h2_1')}}</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">
       <div class="r">
-        <iframe :src="src"
-                id="article"
-                name="article"
-                scrolling="no"
-                frameborder="0"
-                width="100%"
-                :height="hei + 'px'"></iframe>
-        <div class="botton">
-          <el-button type="text"
-                     @click='showall'
-                     v-show="butshow">显示全文</el-button>
-        </div>
+        <h1>{{$t('Header.h2_1')}}</h1>
+        <p>{{$t('iic.p1')}}</p>
+        <p>{{$t('iic.p2')}}</p>
+        <p>{{$t('iic.p3')}}</p>
+        <p class="title">{{$t('iic.p4')}}</p>
+        <p>{{$t('iic.p5')}}</p>
+        <p class="title">{{$t('iic.p6')}}</p>
+        <p>{{$t('iic.p7')}}</p>
+        <p class="title">{{$t('iic.p8')}}</p>
+        <p>{{$t('iic.p9')}}</p>
       </div>
       <div class="l">
-        <h3>{{$t('Header.h4')}}</h3>
+        <h3>{{$t('Header.h2')}}</h3>
         <el-divider></el-divider>
-        <el-menu default-active="/Announcement"
+        <el-menu default-active="/IICIntroduction"
                  class="el-menu-vertical-demo"
                  router>
-          <el-menu-item index="/News">
-            <span slot="title">{{$t('Header.h4_1')}}</span>
+          <el-menu-item index="/IICIntroduction">
+            <span slot="title">{{$t('Header.h2_1')}}</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
-          <el-menu-item index="/Announcement">
-            <span slot="title">{{$t('Header.h4_2')}}</span>
+          <el-menu-item index="/Organization">
+            <span slot="title">{{$t('Header.h2_2')}}</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
         </el-menu>
@@ -54,29 +52,12 @@
 export default {
   data () {
     return {
-      src: '/articles' + this.$t('url') + '/Announcement/' + this.$route.params.id + '.html',
-      hei: 500,
-      butshow: true,
-    }
-  },
-  methods: {
-    showall () {
-      var iframehei = 0;
-      try {
-        iframehei = window.frames['article'].document.body.scrollHeight;
-      } catch (e) { iframehei = 500; }
-      finally {
-        this.hei = iframehei;
-        this.butshow = false;
-      }
+      img: require("../assets/contact.png")
     }
   }
 }
 </script>
 <style scoped>
-.botton {
-  float: right;
-}
 .banner {
   height: 380px;
   background-image: url("../assets/contact.png");
@@ -118,11 +99,22 @@ export default {
 .content .r {
   float: right;
   margin: 20.3px;
-  width: 70%;
-  /* height: 488px; */
+  margin-left: 30px;
+  max-width: 910px;
   margin-top: 0px;
 }
-
+.content .r h1 {
+  font-weight: 400;
+  margin: 5px;
+}
+.content .r p {
+  line-height: 2.2;
+  text-indent: 40px;
+  margin: 8px;
+}
+.content .r .title {
+  font-weight: 600;
+}
 .content .l {
   float: left;
   width: 200px;

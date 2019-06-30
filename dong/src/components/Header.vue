@@ -14,29 +14,26 @@
                mode="horizontal"
                router
                text-color="#000000">
-        <el-menu-item index="/">首页</el-menu-item>
+        <el-menu-item index="/">{{$t('Header.h1')}}</el-menu-item>
         <el-submenu index="2">
-          <template slot="title">关于我们</template>
-          <el-menu-item index="/DGUSTIntroduction">IIC简介</el-menu-item>
-          <el-menu-item index="/DGUSTTeam">DGUST团队</el-menu-item>
-          <el-menu-item index="/Organization">组织构架</el-menu-item>
-          <el-menu-item index="/Cooperate">合作伙伴</el-menu-item>
-          <el-menu-item index="/Aggrement">协议伙伴</el-menu-item>
+          <template slot="title">{{$t('Header.h2')}}</template>
+          <el-menu-item index="/IICIntroduction">{{$t('Header.h2_1')}}</el-menu-item>
+          <el-menu-item index="/Organization">{{$t('Header.h2_2')}}</el-menu-item>
         </el-submenu>
         <el-submenu index="3">
-          <template slot="title">板块分区</template>
-          <el-menu-item index="/Tech">国际高端人才培育区</el-menu-item>
-          <el-menu-item index="/International">新工科发展引领区</el-menu-item>
-          <el-menu-item index="/Investment">科技创新示范区</el-menu-item>
-          <el-menu-item index="/Industry">城市功能区域配套区</el-menu-item>
+          <template slot="title">{{$t('Header.h3')}}</template>
+          <el-menu-item index="/Tech">{{$t('Header.h3_1')}}</el-menu-item>
+          <el-menu-item index="/International">{{$t('Header.h3_2')}}</el-menu-item>
+          <el-menu-item index="/Investment">{{$t('Header.h3_3')}}</el-menu-item>
+          <el-menu-item index="/Industry">{{$t('Header.h3_4')}}</el-menu-item>
         </el-submenu>
         <el-submenu index="4">
-          <template slot="title">新闻动态</template>
-          <el-menu-item index="/News">最新动态</el-menu-item>
-          <el-menu-item index="/Announcement">通知公告</el-menu-item>
+          <template slot="title">{{$t('Header.h4')}}</template>
+          <el-menu-item index="/News">{{$t('Header.h4_1')}}</el-menu-item>
+          <el-menu-item index="/Announcement">{{$t('Header.h4_2')}}</el-menu-item>
         </el-submenu>
-        <el-menu-item index="/Talent">人才招聘</el-menu-item>
-        <el-menu-item index="/Contact">联系我们</el-menu-item>
+        <el-menu-item index="/Talent">{{$t('Header.h5')}}</el-menu-item>
+        <el-menu-item index="/Contact">{{$t('Header.h6')}}</el-menu-item>
       </el-menu>
     </div>
   </div>

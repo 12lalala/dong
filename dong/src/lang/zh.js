@@ -2,7 +2,6 @@ export default {
   navmenu: {
     n1: '',
     n2: '',
-
   },
   common: {
     confirm: '确定',

@@ -18,9 +18,9 @@ import './assets/css/override-element-ui.css'
 
 Vue.use(VueRouter)
 
-Vue.use(ElementUI);
+Vue.use(ElementUI)
 
-Vue.use(VueAMap);
+Vue.use(VueAMap)
 
 // 国际化
 Vue.use(i18n)
@@ -151,7 +151,7 @@ const router = new VueRouter({
 
 new Vue({
   el: '#app',
-  render: h => h(App),
   i18n, // 便于可以直接在组件中通过this.$i18n使用，也可以按需引用
-  router
+  router,
+  render: h => h(App),
 });

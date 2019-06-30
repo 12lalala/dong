@@ -147,27 +147,27 @@ export default {
   overflow: hidden;
 }
 .banner dl {
-  width: 317px;
-  height: 52px;
-  color: #fff;
   margin: 0 auto;
-  margin-top: 150px;
+  color: #fff;
   overflow: hidden;
+  padding: 0;
+  line-height: 380px;
+  text-align: center;
 }
 
 .banner dd {
+  display: inline-block;
+  vertical-align: middle;
   height: 1px;
+  background: #fff;
   width: 60px;
-  background-color: #fff;
-  float: left;
-  margin-top: 25px;
-  margin-left: 0;
+  margin: 0;
 }
 .banner dl dt {
-  font-size: 2.5em;
+  margin: 0 0.5em;
+  display: inline-block;
   vertical-align: middle;
-  float: left;
-  margin: 0 17.5px;
+  font-size: 2.5em;
 }
 .content {
   max-width: 1200px;

@@ -3,7 +3,7 @@
     <div class="banner">
       <dl>
         <dd></dd>
-        <dt>{{$t('Header.h2_1')}}</dt>
+        <dt>{{$t('Header.h2_2')}}</dt>
         <dd></dd>
       </dl>
     </div>
@@ -11,7 +11,7 @@
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">{{$t('Header.h1')}}</el-breadcrumb-item>
         <el-breadcrumb-item>{{$t('Header.h2')}}</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/Organization' }">{{$t('Header.h2_1')}}</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/Organization' }">{{$t('Header.h2_2')}}</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">
@@ -58,27 +58,27 @@ export default {
   overflow: hidden;
 }
 .banner dl {
-  width: 317px;
-  height: 52px;
-  color: #fff;
   margin: 0 auto;
-  margin-top: 150px;
+  color: #fff;
   overflow: hidden;
+  padding: 0;
+  line-height: 380px;
+  text-align: center;
 }
 
 .banner dd {
+  display: inline-block;
+  vertical-align: middle;
   height: 1px;
+  background: #fff;
   width: 60px;
-  background-color: #fff;
-  float: left;
-  margin-top: 25px;
-  margin-left: 0;
+  margin: 0;
 }
 .banner dl dt {
-  font-size: 2.5em;
+  margin: 0 0.5em;
+  display: inline-block;
   vertical-align: middle;
-  float: left;
-  margin: 0 17.5px;
+  font-size: 2.5em;
 }
 .content {
   max-width: 1200px;
@@ -103,10 +103,11 @@ export default {
 .content .l {
   float: left;
   width: 200px;
+  overflow: hidden;
 }
 .content .l h3 {
   font-weight: 100;
-  font-size: 1.75em;
+  font-size: 1.55em;
   margin-left: 40px;
   margin-top: 10px;
   margin-bottom: 0;

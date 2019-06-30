@@ -61,43 +61,43 @@ const routes = [{
   {
     path: '/IICIntroduction',
     component: IICIntroduction
-  }, //1
+  }, //1 ICC简介页面
   {
     path: '/Organization',
     component: Organization
-  }, //3
+  }, //3  组织架构页面
   {
     path: '/Tech',
     component: Tech
-  }, //6
+  }, //6 国际高端人才培育区页面
   {
     path: '/International',
     component: International
-  }, //7
+  }, //7 新工科发展引领区页面
   {
     path: '/Investment',
     component: Investment
-  }, //8
+  }, //8 科技创新示范区页面
   {
     path: '/Industry',
     component: Industry
-  }, //9
+  }, //9 城市功能区域配套区页面
   {
     path: '/News',
     component: News
-  }, //10
+  }, //10 最新动态页面
   {
     path: '/Announcement',
     component: Announcement
-  }, //11
+  }, //11 通知公告页面
   {
     path: '/Contact',
     component: Contact
-  }, //16
+  }, //16 联系我们页面
   {
     path: '/Talent',
     component: Talent
-  }, //15
+  }, //15 人才招聘页面
   {
     path: '/article/news/:id',
     component: ArticleN,

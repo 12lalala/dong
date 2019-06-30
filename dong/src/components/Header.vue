@@ -86,9 +86,11 @@ export default {
       } catch (e) { }
       if (language == "zh" || language == "") {
         this.language = "中文";
+        this.$i18n.locale = "zh";
       }
       else {
         this.language = "English";
+        this.$i18n.locale = "en";
       }
     }
   },

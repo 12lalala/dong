@@ -3,21 +3,21 @@
     <div class="banner">
       <dl>
         <dd></dd>
-        <dt>发展引领</dt>
+        <dt>{{$t('Hello.p2m')}}</dt>
         <dd></dd>
       </dl>
     </div>
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item>板块分区</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/International' }">发展引领</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/' }">{{$t('Header.h1')}}</el-breadcrumb-item>
+        <el-breadcrumb-item>{{$t('Header.h3')}}</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/International' }">{{$t('Hello.p2m')}}</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">
       <div class="r">
-        <h1>新工科发展引领区</h1>
-        <p>基于国际创新资源汇聚交融的优势，以美国斯坦福大学为代表的世界一流大学和以硅谷著名创新公司及孵化器平台为代表的高水平创新平台资源，面向学校和企业开展国际化的项目合作、人才交流和双创培训等业务，为浙大教职工、浙大学生、初创团队、校友企业家提供赴海外创新创业领域的项目培训管理、实习、项目实践、商事培训方案解决等服务。</p>
+        <h1>{{$t('Hello.p2')}}</h1>
+        <p>{{$t('Division.development')}}</p>
         <br>
         <br>
         <el-image style="width: 840px; height: 253px"
@@ -29,25 +29,25 @@
                   :fit="fit"></el-image>
       </div>
       <div class="l">
-        <h3>板块分区</h3>
+        <h3>{{$t('Header.h3')}}</h3>
         <el-divider></el-divider>
         <el-menu default-active="/International"
                  class="el-menu-vertical-demo"
                  router>
           <el-menu-item index="/Tech">
-            <span slot="title">国际高端人才培育区</span>
+            <span slot="title">{{$t('Header.h3_1')}}</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/International">
-            <span slot="title">新工科发展引领区</span>
+            <span slot="title">{{$t('Header.h3_2')}}</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/Investment">
-            <span slot="title">科技创新示范区</span>
+            <span slot="title">{{$t('Header.h3_3')}}</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/Industry">
-            <span slot="title">城市功能区域配套区</span>
+            <span slot="title">{{$t('Header.h3_4')}}</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
         </el-menu>

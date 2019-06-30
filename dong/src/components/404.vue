@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="four">
-      <el-image style="width: 1000px; height: 660px"
+      <el-image style="width: 1200px; height: 660px"
                 :src="img"
                 :fit="fit"></el-image>
     </div>

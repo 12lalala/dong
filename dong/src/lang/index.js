@@ -4,10 +4,10 @@ import enLocale from './en'
 import zhLocale from './zh'
 const messages = {
   en: {
-    enLocale
+    ...enLocale
   },
   zh: {
-    zhLocale
+    ...zhLocale
   }
 }
 Vue.use(VueI18n)

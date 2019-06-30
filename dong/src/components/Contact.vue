@@ -3,18 +3,18 @@
     <div class="banner">
       <dl>
         <dd></dd>
-        <dt>联系我们</dt>
+        <dt>{{$t('Header.h6')}}</dt>
         <dd></dd>
       </dl>
     </div>
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/Contact' }">联系我们</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/' }">{{$t('Header.h1')}}</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/Contact' }">{{$t('Header.h6')}}</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">
-      <h3>联系我们</h3>
+      <h3>{{$t('Header.h6')}}</h3>
       <br>
       <div class="map">
         <div class="amap-wrapper">
@@ -28,15 +28,15 @@
           </el-amap>
         </div>
       </div>
-      <p class="description1">东莞理工学院国际创新研究院</p>
+      <p class="description1">{{$t('Contact.schoolname')}}</p>
       <p class="description2">
-        地址：{{address}}
+        {{$t('Contact.addr')}}{{address}}
         <br>
-        电话: {{tel}}
+        {{$t('Contact.tel')}}{{tel}}
         <br>
-        传真: {{fax}}
+        {{$t('Contact.fax')}}{{fax}}
         <br>
-        简历投递邮箱：
+        {{$t('Contact.email')}}
         <el-link :href="email.url"
                  :underline="false"
                  target="_blank">{{email.email}}</el-link>
@@ -54,11 +54,11 @@ export default {
       center: [113.875019, 22.902542],
       position: [113.875019, 22.902542],
       img: require("../assets/contact.png"),
-      address: "",
-      tel: "",
-      fax: "",
+      address: this.$t('Contact.address'),
+      tel: this.$t('Contact.telephone'),
+      fax: this.$t('Contact.faxaddress'),
       email: {
-        email: "",
+        email: this.$t('Contact.emailaddress'),
         url: "",
       },
     }

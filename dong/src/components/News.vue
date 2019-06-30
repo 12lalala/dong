@@ -3,20 +3,20 @@
     <div class="banner">
       <dl>
         <dd></dd>
-        <dt>最新动态</dt>
+        <dt>{{$t('Header.h4_1')}}</dt>
         <dd></dd>
       </dl>
     </div>
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item>新闻动态</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/News' }">最新动态</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/' }">{{$t('Header.h1')}}</el-breadcrumb-item>
+        <el-breadcrumb-item>{{$t('Header.h4')}}</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/News' }">{{$t('Header.h4_1')}}</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">
       <div class="r">
-        <h1>最新动态</h1>
+        <h1>{{$t('Header.h4_1')}}</h1>
         <el-scrollbar style="height:500px;">
           <ul class="infinite-list"
               v-infinite-scroll="load">
@@ -42,17 +42,17 @@
         </el-scrollbar>
       </div>
       <div class="l">
-        <h3>新闻动态</h3>
+        <h3>{{$t('Header.h4')}}</h3>
         <el-divider></el-divider>
         <el-menu default-active="/News"
                  class="el-menu-vertical-demo"
                  router>
           <el-menu-item index="/News">
-            <span slot="title">最新动态</span>
+            <span slot="title">{{$t('Header.h4_1')}}</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/Announcement">
-            <span slot="title">通知公告</span>
+            <span slot="title">{{$t('Header.h4_2')}}</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
         </el-menu>
@@ -71,110 +71,41 @@ export default {
       item: 5,
       articles: [
         {
-          articleid: "1",
+          articleid: "5",
           imgurl: require("../assets/newimages/1.png"),
-          title: "汇聚尖端双创资源，助力海外人才引进 “造梦”白鹿城温州——全球创新创业硅谷视频路演活动成功举办",
+          title: this.$t('News.articles.article5.title'),
           time: "2019-06-21",
-          introduction: "6月18日，由温州市市委组织部、温州高新区(浙南科技城)管委会、温州市瓯海区人民政府主办，浙江大学国际创新研究院协办的2019“造梦”白鹿城温州——全球…"
+          introduction: this.$t('News.articles.article5.introduction')
+        },
+        {
+          articleid: "4",
+          imgurl: require("../assets/newimages/1.png"),
+          title: this.$t('News.articles.article4.title'),
+          time: "2019-06-21",
+          introduction: this.$t('News.articles.article4.introduction')
+        },
+        {
+          articleid: "3",
+          imgurl: require("../assets/newimages/1.png"),
+          title: this.$t('News.articles.article3.title'),
+          time: "2019-06-21",
+          introduction: this.$t('News.articles.article3.introduction')
+        },
+        {
+          articleid: "2",
+          imgurl: require("../assets/newimages/1.png"),
+          title: this.$t('News.articles.article2.title'),
+          time: "2019-06-21",
+          introduction: this.$t('News.articles.article2.introduction')
         },
         {
           articleid: "1",
           imgurl: require("../assets/newimages/1.png"),
-          title: "汇聚尖端双创资源，助力海外人才引进 “造梦”白鹿城温州——全球创新创业硅谷视频路演活动成功举办",
+          title: this.$t('News.articles.article1.title'),
           time: "2019-06-21",
-          introduction: "6月18日，由温州市市委组织部、温州高新区(浙南科技城)管委会、温州市瓯海区人民政府主办，浙江大学国际创新研究院协办的2019“造梦”白鹿城温州——全球…"
+          introduction: this.$t('News.articles.article1.introduction')
         },
-        {
-          articleid: "1",
-          imgurl: require("../assets/newimages/1.png"),
-          title: "汇聚尖端双创资源，助力海外人才引进 “造梦”白鹿城温州——全球创新创业硅谷视频路演活动成功举办",
-          time: "2019-06-21",
-          introduction: "6月18日，由温州市市委组织部、温州高新区(浙南科技城)管委会、温州市瓯海区人民政府主办，浙江大学国际创新研究院协办的2019“造梦”白鹿城温州——全球…"
-        },
-        {
-          articleid: "1",
-          imgurl: require("../assets/newimages/1.png"),
-          title: "汇聚尖端双创资源，助力海外人才引进 “造梦”白鹿城温州——全球创新创业硅谷视频路演活动成功举办",
-          time: "2019-06-21",
-          introduction: "6月18日，由温州市市委组织部、温州高新区(浙南科技城)管委会、温州市瓯海区人民政府主办，浙江大学国际创新研究院协办的2019“造梦”白鹿城温州——全球…"
-        },
-        {
-          articleid: "1",
-          imgurl: require("../assets/newimages/1.png"),
-          title: "汇聚尖端双创资源，助力海外人才引进 “造梦”白鹿城温州——全球创新创业硅谷视频路演活动成功举办",
-          time: "2019-06-21",
-          introduction: "6月18日，由温州市市委组织部、温州高新区(浙南科技城)管委会、温州市瓯海区人民政府主办，浙江大学国际创新研究院协办的2019“造梦”白鹿城温州——全球…"
-        },
-        {
-          articleid: "1",
-          imgurl: require("../assets/newimages/1.png"),
-          title: "汇聚尖端双创资源，助力海外人才引进 “造梦”白鹿城温州——全球创新创业硅谷视频路演活动成功举办",
-          time: "2019-06-21",
-          introduction: "6月18日，由温州市市委组织部、温州高新区(浙南科技城)管委会、温州市瓯海区人民政府主办，浙江大学国际创新研究院协办的2019“造梦”白鹿城温州——全球…"
-        },
-        {
-          articleid: "1",
-          imgurl: require("../assets/newimages/1.png"),
-          title: "汇聚尖端双创资源，助力海外人才引进 “造梦”白鹿城温州——全球创新创业硅谷视频路演活动成功举办",
-          time: "2019-06-21",
-          introduction: "6月18日，由温州市市委组织部、温州高新区(浙南科技城)管委会、温州市瓯海区人民政府主办，浙江大学国际创新研究院协办的2019“造梦”白鹿城温州——全球…"
-        },
-        {
-          articleid: "1",
-          imgurl: require("../assets/newimages/1.png"),
-          title: "汇聚尖端双创资源，助力海外人才引进 “造梦”白鹿城温州——全球创新创业硅谷视频路演活动成功举办",
-          time: "2019-06-21",
-          introduction: "6月18日，由温州市市委组织部、温州高新区(浙南科技城)管委会、温州市瓯海区人民政府主办，浙江大学国际创新研究院协办的2019“造梦”白鹿城温州——全球…"
-        },
-        {
-          articleid: "1",
-          imgurl: require("../assets/newimages/1.png"),
-          title: "汇聚尖端双创资源，助力海外人才引进 “造梦”白鹿城温州——全球创新创业硅谷视频路演活动成功举办",
-          time: "2019-06-21",
-          introduction: "6月18日，由温州市市委组织部、温州高新区(浙南科技城)管委会、温州市瓯海区人民政府主办，浙江大学国际创新研究院协办的2019“造梦”白鹿城温州——全球…"
-        },
-        {
-          articleid: "1",
-          imgurl: require("../assets/newimages/1.png"),
-          title: "汇聚尖端双创资源，助力海外人才引进 “造梦”白鹿城温州——全球创新创业硅谷视频路演活动成功举办",
-          time: "2019-06-21",
-          introduction: "6月18日，由温州市市委组织部、温州高新区(浙南科技城)管委会、温州市瓯海区人民政府主办，浙江大学国际创新研究院协办的2019“造梦”白鹿城温州——全球…"
-        },
-        {
-          articleid: "1",
-          imgurl: require("../assets/newimages/1.png"),
-          title: "汇聚尖端双创资源，助力海外人才引进 “造梦”白鹿城温州——全球创新创业硅谷视频路演活动成功举办",
-          time: "2019-06-21",
-          introduction: "6月18日，由温州市市委组织部、温州高新区(浙南科技城)管委会、温州市瓯海区人民政府主办，浙江大学国际创新研究院协办的2019“造梦”白鹿城温州——全球…"
-        },
-        {
-          articleid: "1",
-          imgurl: require("../assets/newimages/1.png"),
-          title: "汇聚尖端双创资源，助力海外人才引进 “造梦”白鹿城温州——全球创新创业硅谷视频路演活动成功举办",
-          time: "2019-06-21",
-          introduction: "6月18日，由温州市市委组织部、温州高新区(浙南科技城)管委会、温州市瓯海区人民政府主办，浙江大学国际创新研究院协办的2019“造梦”白鹿城温州——全球…"
-        },
-        {
-          articleid: "1",
-          imgurl: require("../assets/newimages/1.png"),
-          title: "汇聚尖端双创资源，助力海外人才引进 “造梦”白鹿城温州——全球创新创业硅谷视频路演活动成功举办",
-          time: "2019-06-21",
-          introduction: "6月18日，由温州市市委组织部、温州高新区(浙南科技城)管委会、温州市瓯海区人民政府主办，浙江大学国际创新研究院协办的2019“造梦”白鹿城温州——全球…"
-        },
-        {
-          articleid: "1",
-          imgurl: require("../assets/newimages/1.png"),
-          title: "汇聚尖端双创资源，助力海外人才引进 “造梦”白鹿城温州——全球创新创业硅谷视频路演活动成功举办",
-          time: "2019-06-21",
-          introduction: "6月18日，由温州市市委组织部、温州高新区(浙南科技城)管委会、温州市瓯海区人民政府主办，浙江大学国际创新研究院协办的2019“造梦”白鹿城温州——全球…"
-        },
-        {
-          articleid: "1",
-          imgurl: require("../assets/newimages/1.png"),
-          title: "汇聚尖端双创资源，助力海外人才引进 “造梦”白鹿城温州——全球创新创业硅谷视频路演活动成功举办",
-          time: "2019-06-21",
-          introduction: "6月18日，由温州市市委组织部、温州高新区(浙南科技城)管委会、温州市瓯海区人民政府主办，浙江大学国际创新研究院协办的2019“造梦”白鹿城温州——全球…"
-        },
+
       ],
 
     }

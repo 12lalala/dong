@@ -3,15 +3,15 @@
     <div class="banner">
       <dl>
         <dd></dd>
-        <dt>通知公告</dt>
+        <dt>{{$t('Header.h4_2')}}</dt>
         <dd></dd>
       </dl>
     </div>
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item>新闻动态</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/Announcement' }">通知公告</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/' }">{{$t('Header.h1')}}</el-breadcrumb-item>
+        <el-breadcrumb-item>{{$t('Header.h4')}}</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/Announcement' }">{{$t('Header.h4_2')}}</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">
@@ -30,17 +30,17 @@
         </div>
       </div>
       <div class="l">
-        <h3>新闻动态</h3>
+        <h3>{{$t('Header.h4')}}</h3>
         <el-divider></el-divider>
         <el-menu default-active="/Announcement"
                  class="el-menu-vertical-demo"
                  router>
           <el-menu-item index="/News">
-            <span slot="title">最新动态</span>
+            <span slot="title">{{$t('Header.h4_1')}}</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
           <el-menu-item index="/Announcement">
-            <span slot="title">通知公告</span>
+            <span slot="title">{{$t('Header.h4_2')}}</span>
             <i class="el-icon-right"></i>
           </el-menu-item>
         </el-menu>
@@ -54,7 +54,7 @@
 export default {
   data () {
     return {
-      src: '/articles/Announcement/' + this.$route.params.id + '.html',
+      src: '/articles' + this.$t('url') + '/Announcement/' + this.$route.params.id + '.html',
       hei: 500,
       butshow: true,
     }

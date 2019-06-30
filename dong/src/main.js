@@ -114,7 +114,10 @@ const routes = [{
     path: '/404',
     component: n404
   },
-
+  {
+    path: '*',
+    component: n404
+  },
 ]
 
 const router = new VueRouter({

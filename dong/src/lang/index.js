@@ -13,7 +13,11 @@ const messages = {
 }
 Vue.use(VueI18n)
 const i18n = new VueI18n({
+<<<<<<< HEAD
   locale: Cookies.get('language') || 'zh',
+=======
+  locale: 'en',
+>>>>>>> 1526677b5b3be0abe86722bdcd3d1049865be85a
   messages
 })
 export default i18n

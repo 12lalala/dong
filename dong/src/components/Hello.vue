@@ -124,15 +124,146 @@
         </div>
       </div>
     </div>
+    <div class="friendLinks">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-2">
+            <div class="linksTitle">友情链接 <span>Links</span></div>
+            <div style="position: absolute;left: 124px; width: 30px;top: 75px;height: 4px;background: #f5874a"></div>
+          </div>
+
+          <div class="col-xs-2 list1">
+            <ul>
+              <li><a href="http://sw.dgut.edu.cn/">计算机与网络安全学院</a></li>
+              <li><a href="http://172.31.5.17/">电子工程与智能化学院</a></li>
+              <li><a href="http://hshx.dgut.edu.cn/">化学工程与能源技术学院</a></li>
+              <li><a href="http://jxx.dgut.edu.cn/">机械工程学院</a></li>
+              <li><a href="http://jmx.dgut.edu.cn/">经济与管理学院</a></li>
+              <li><a href="http://wch.dgut.edu.cn/">文学与传媒学院</a></li>
+              <li><a href="http://zfx.dgut.edu.cn/">法律与社会工作学院</a></li>
+              <li><a href="http://zfx.dgut.edu.cn/">（知识产权学院）</a></li>
+              <li><a href="http://sf.dgut.edu.cn/">教育学院（师范学院）</a></li>
+              <li><a href="http://civil.dgut.edu.cn/">生态环境与建筑工程学院</a></li>
+              <li><a href="http://cjy.dgut.edu.cn/">继续教育学院</a></li>
+              <li><a href="http://szb.dgut.edu.cn">思想政治理论教学部</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-2 list2">
+            <ul>
+              <li><a href="http://yb.dgut.edu.cn/">学校办公室</a></li>
+              <li><a href="http://zzb.dgut.edu.cn/">党委组织部</a></li>
+              <li><a href="http://eelab.dgut.edu.cn/">党委宣传部</a></li>
+              <li><a href="http://sjc.dgut.edu.cn/">审计监察部</a></li>
+              <li><a href="http://eelab.dgut.edu.cn/">人事处</a></li>
+              <li><a href="http://jwc.dgut.edu.cn">教务处</a></li>
+              <li><a href="http://xsc.dgut.edu.cn/">学生处</a></li>
+              <li><a href="http://scitech.dgut.edu.cn/">科研处</a></li>
+              <li><a href="http://gjc.dgut.edu.cn/">国际合作与交流处</a></li>
+              <li><a href="http://eelab.dgut.edu.cn/">财务处</a></li>
+              <li><a href="http://eelab.dgut.edu.cn/">资产后勤管理处</a></li>
+              <li><a href="http://bwc.dgut.edu.cn/">保卫处</a></li>
+              <li><a href="http://gh.dgut.edu.cn/">工会</a></li>
+              <li><a href="http://tw.dgut.edu.cn/">团委</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-2 list3">
+            <ul>
+              <li><a href="http://xyh.dgut.edu.cn/">学科建设管理办公室</a></li>
+              <li><a href="http://xyh.dgut.edu.cn/">发展与联络办公室</a></li>
+              <li><a href="http://eelab.dgut.edu.cn/">高教研究与评估中心</a></li>
+              <li><a href="http://eelab.dgut.edu.cn/">协同创新办公室</a></li>
+              <li><a href="http://eelab.dgut.edu.cn/">教师发展中心</a></li>
+              <li><a href="http://eelab.dgut.edu.cn/">学生事务与发展中心</a></li>
+              <li><a href="http://gcxq.dgut.edu.cn/">莞城校区管委会</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-2 list3">
+            <ul>
+              <li><a href="http://xyh.dgut.edu.cn/">科技创新研究院</a></li>
+              <li><a href="http://www.lib.dgut.edu.cn/">图书馆</a></li>
+              <li><a href="http://nic.dgut.edu.cn/">网络与教育技术中心</a></li>
+              <li><a href="http://dglg.cbpt.cnki.net">学报编辑部</a></li>
+              <li><a href="http://eelab.dgut.edu.cn/">工程技术研究院</a></li>
+              <li><a href="http://shyjy.dgut.edu.cn/">社会发展研究院</a></li>
+              <li><a href="http://eelab.dgut.edu.cn/">广东高校化工清洁生产与绿色化学品工程技术开发中心</a></li>
+              <li><a href="http://eelab.dgut.edu.cn/">广东高校网络与信息安全工程技术开发中心</a></li>
+              <li><a href="http://www.dgcp.org/">东莞市清洁生产科技中心</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-2 list3">
+            <ul>
+              <li><a href="http://houqin.dgut.edu.cn/">后勤集团</a></li>
+              <li><a href="http://kjcy.dgut.edu.cn/">科技产业公司</a></li>
+              <li><a href="http://eelab.dgut.edu.cn/">学术交流中心</a></li>
+              <li><a href="http://eelab.dgut.edu.cn/">体育场馆中心</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="about"
+         v-show="about">
+      <div style="margin: 0 auto;width: 130px;">
+        <el-link :href="downabout[0]"
+                 :underline="false">人才招聘</el-link>
+        <el-divider direction="vertical"></el-divider>
+        <el-link :href="downabout[1]"
+                 :underline="false">联系我们</el-link>
+      </div>
+    </div>
+
+    <!-- 移动端导航栏 -->
+    <div v-show="headdown"
+         class="headdown">
+      <mt-tabbar v-model="selected"
+                 :fixed="fixed">
+        <mt-tab-item id="首页">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          首页
+        </mt-tab-item>
+        <mt-tab-item id="关于我们">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          关于我们
+        </mt-tab-item>
+        <mt-tab-item id="板块分区">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          板块分区
+        </mt-tab-item>
+        <mt-tab-item id="新闻动态">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          新闻动态
+        </mt-tab-item>
+      </mt-tabbar>
+    </div>
   </div>
 </template>
 
 <script>
+import Cookies from 'js-cookie'
 export default {
   name: "Hello",
   data () {
     return {
+      fixed: true,
+      about: 0,
+      selected: '首页',
+      device: '',
+      headdown: 0,
       bannerH: 343,
+      downabout: [
+        './Contact',
+        './Talent',
+      ],
       imgList: [
         { url: require("../assets/hello.jpg") },
         { url: require("../assets/hello.jpg") },
@@ -160,16 +291,54 @@ export default {
       fit: "cover",
     }
   },
+  watch: {
+    selected (newval) {
+      switch (newval) {
+        case '首页':
+          this.$router.push({
+            path: '/'
+          })
+          break;
+        case '关于我们':
+          this.$router.push({
+            path: '/IICIntroduction'
+          })
+          break;
+        case '板块分区':
+          this.$router.push({
+            path: '/Tech'
+          })
+          break;
+        case '新闻动态':
+          this.$router.push({
+            path: '/News'
+          })
+          break;
+      }
+    }
+  },
   methods: {
     setBannerH () {
       this.bannerH = document.body.clientWidth / 3.5
-    }
+    },
+    getDeviceCookie () {
+      this.device = Cookies.get('device');
+      if (this.device == 'mobile') {
+        this.headdown = 1;
+        this.about = 1;
+      }
+      else {
+        this.headdown = 0;
+        this.about = 0;
+      }
+    },
   },
   mounted () {
     this.setBannerH()
     window.addEventListener('resize', () => {
       this.setBannerH()
     }, false)
+    this.getDeviceCookie()
   },
   created () { }
 }
@@ -205,8 +374,8 @@ export default {
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
 }
-/* 清除rooter-link的样式 */
-a {
+/* 清除router-link的样式 */
+ul a {
   color: #ffffff;
   text-decoration: none;
 }
@@ -320,6 +489,91 @@ a:visited {
   color: #8b9aaf;
   font-size: 12px;
   padding-top: 4px;
+}
+.headdown {
+  position: absolute;
+  z-index: 100;
+}
+.about {
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+}
+/* 友情链接 */
+.friendLinks {
+  width: 100%;
+  margin-top: 35px;
+  height: 500px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+/* .container {
+  width: 1230px !important;
+} */
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1230px;
+  overflow: hidden;
+}
+.friendLinks > .container {
+  position: relative;
+  bottom: -17px;
+  background: url("../assets/footer_bg.jpg") no-repeat;
+  background-position: -345px 20px;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.row ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.col-xs-2 {
+  width: 16.66666667%;
+}
+.friendLinks .list1,
+.list2,
+.list3 {
+  margin-top: 53px;
+}
+.linksTitle {
+  width: 180px;
+  margin-top: 47px;
+  margin-right: 170px;
+  font-size: 25px;
+  font-family: PingFangSC, 微软雅黑;
+  color: rgb(46, 126, 185);
+}
+.linksTitle span {
+  font-family: 微软雅黑;
+  vertical-align: super;
+  font-size: 14px;
+}
+.friendLinks ul li {
+  list-style: none;
+  line-height: 30px;
+}
+.friendLinks a {
+  color: #000;
+}
+.col-xs-1,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9 {
+  float: left;
 }
 @media only screen and (max-width: 1200px) and (min-width: 830px) {
   /* 分类 */
@@ -454,7 +708,7 @@ a:visited {
   }
   .cards {
     max-width: 1000px;
-    margin: 20px auto;
+    margin: 0px auto;
     overflow: hidden;
   }
   .cards div {
@@ -465,6 +719,12 @@ a:visited {
     max-width: 600px;
     margin: 20px 5px auto;
     float: left;
+  }
+  .about {
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 60px;
   }
 }
 </style>

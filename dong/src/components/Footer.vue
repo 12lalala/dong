@@ -1,6 +1,7 @@
 <template>
   <!-- 页尾 -->
-  <div class="footer">
+  <div class="footer"
+       v-show="footer">
     <div class="content">
       <div class="link">
         <router-link to="/DGUSTIntroduction"
@@ -28,9 +29,28 @@
 </template>
 
 <script>
+import Cookies from 'js-cookie'
 export default {
   name: "Footer",
-
+  data () {
+    return {
+      footer: 1,
+    }
+  },
+  methods: {
+    getDeviceCookie () {
+      this.device = Cookies.get('device');
+      if (this.device == 'mobile') {
+        this.footer = 0;
+      }
+      else {
+        this.footer = 1;
+      }
+    },
+  },
+  mounted () {
+    this.getDeviceCookie()
+  },
 }
 </script>
 

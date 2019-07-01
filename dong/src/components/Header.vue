@@ -7,6 +7,18 @@
            width="75px"
            height="75px">
     </div>
+    <div class="button">
+      <el-dropdown @command="changelanguage"
+                   trigger="click">
+        <span class="el-dropdown-link">
+          {{language}}<i class="el-icon-arrow-down el-icon--right"></i>
+        </span>
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item command="zh">中文</el-dropdown-item>
+          <el-dropdown-item command="en">English</el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
+    </div>
     <div class="header2">
       <!-- 导航栏 -->
       <el-menu :default-active="activeIndex"
@@ -41,11 +53,13 @@
 </template>
 
 <script>
+import Cookies from 'js-cookie'
 export default {
   name: "Header",
   data () {
     return {
       activeIndex: "/",
+      language: "中文",
     }
   },
   methods: {
@@ -53,10 +67,36 @@ export default {
       let hrefs = href.split('//');
       let key = hrefs[1].split('/')[1];
       this.activeIndex = "/" + key;
+    },
+    changelanguage (command) {
+      this.$i18n.locale = command;
+      if (command == "zh") {
+        this.language = "中文";
+      }
+      else {
+        this.language = "English";
+      }
+      Cookies.set('language', command)
+    },
+    checklonguage () {
+      let language = "";
+      try {
+        language = Cookies.get('language');
+        // eslint-disable-next-line no-empty
+      } catch (e) { }
+      if (language == "zh" || language == "") {
+        this.language = "中文";
+        this.$i18n.locale = "zh";
+      }
+      else {
+        this.language = "English";
+        this.$i18n.locale = "en";
+      }
     }
   },
   mounted () {
     this.getActiveNav(window.location.href);
+    this.checklonguage();
   }
 }
 </script>
@@ -81,6 +121,18 @@ export default {
   float: left;
   margin: 5px auto;
 }
-@media screen and (max-device-width: 830px) {
+.button {
+  overflow: hidden;
+  float: right;
+  width: 80px;
+  margin-top: 20px;
+  padding-top: 18px;
+}
+.el-dropdown-link {
+  cursor: pointer;
+  color: #409eff;
+}
+.el-icon-arrow-down {
+  font-size: 12px;
 }
 </style>

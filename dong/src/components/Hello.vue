@@ -2,7 +2,8 @@
   <div>
     <mt-header fixed
                title="首页"
-               style="position: absolute;z-index: 100;top: 0;right: 0;left: 0;position: fixed;"></mt-header>
+               style="position: absolute;z-index: 100;top: 0;right: 0;left: 0;position: fixed;"
+               v-show="goback"></mt-header>
     <!-- 跑马灯 -->
     <div class="carousel">
       <el-carousel :interval="5000"
@@ -262,6 +263,7 @@ export default {
       selected: '首页',
       device: '',
       headdown: 0,
+      goback: 0,
       bannerH: 343,
       downabout: [
         './Contact',
@@ -329,8 +331,10 @@ export default {
       if (this.device == 'mobile') {
         this.headdown = 1;
         this.about = 1;
+        this.goback = 1;
       }
       else {
+        this.goback = 0;
         this.headdown = 0;
         this.about = 0;
       }

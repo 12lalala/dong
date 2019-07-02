@@ -145,6 +145,9 @@ export default {
   display: block;
   background: #ffffff;
   overflow: hidden;
+  border-top-style: solid;
+  border-top-color: #409eff;
+  border-top-width: 1px;
 }
 
 .header2 {

@@ -9,7 +9,7 @@
     </div>
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item :to="{ path: '/' }">{{$t('Header.h1')}}</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/' }">&nbsp;{{$t('Header.h1')}}</el-breadcrumb-item>
         <el-breadcrumb-item>{{$t('Header.h3')}}</el-breadcrumb-item>
         <el-breadcrumb-item :to="{ path: '/International' }">{{$t('Hello.p2m')}}</el-breadcrumb-item>
       </el-breadcrumb>
@@ -20,11 +20,11 @@
         <p>{{$t('Division.development')}}</p>
         <br>
         <br>
-        <el-image style="width: 840px; height: 253px"
+        <el-image class="photo1"
                   :src="url1"
                   :fit="fit"></el-image>
         <br>
-        <el-image style="width: 853px; height: 421px"
+        <el-image class="photo2"
                   :src="url2"
                   :fit="fit"></el-image>
       </div>
@@ -113,6 +113,14 @@ export default {
   max-width: 910px;
   margin-top: 0px;
 }
+.content .r .photo1 {
+  width: 840px;
+  height: 253px;
+}
+.content .r .photo2 {
+  width: 853px;
+  height: 421px;
+}
 .content .r h1 {
   font-weight: 400;
   margin: 5px;
@@ -142,5 +150,67 @@ export default {
   max-width: 1200px;
   overflow: hidden;
   margin: 20px auto;
+}
+@media only screen and (max-width: 830px) {
+  .banner {
+    height: 220px;
+    background-image: url("../assets/contact.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  .banner dl {
+    margin: 0 auto;
+    color: #fff;
+    overflow: hidden;
+    padding: 0;
+    line-height: 220px;
+    text-align: center;
+  }
+
+  .banner dd {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1px;
+    background: #fff;
+    width: 60px;
+    margin: 0;
+  }
+  .banner dl dt {
+    margin: 0 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.5em;
+  }
+  .content .r {
+    float: right;
+    margin: 0px;
+  }
+  .content .r .photo1 {
+    width: 100%;
+    height: 180px;
+  }
+  .content .r .photo2 {
+    width: 100%;
+    height: 180px;
+  }
+  .content .r h1 {
+    font-weight: 400;
+    margin: 5px;
+    font-size: 1.45em;
+  }
+  .content .r p {
+    line-height: 1.8;
+    text-indent: 40px;
+    margin: 8px;
+  }
+  .content {
+    max-width: 1200px;
+    padding: 5.3px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
 }
 </style>

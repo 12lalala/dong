@@ -9,7 +9,7 @@
     </div>
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item :to="{ path: '/' }">{{$t('Header.h1')}}</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/' }">&nbsp;{{$t('Header.h1')}}</el-breadcrumb-item>
         <el-breadcrumb-item :to="{ path: '/Contact' }">{{$t('Header.h6')}}</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
@@ -134,6 +134,56 @@ export default {
   max-width: 1200px;
   overflow: hidden;
   margin: 20px auto;
+}
+@media only screen and (max-width: 830px) {
+  .banner {
+    height: 220px;
+    background-image: url("../assets/contact.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  .banner dl {
+    margin: 0 auto;
+    color: #fff;
+    overflow: hidden;
+    padding: 0;
+    line-height: 220px;
+    text-align: center;
+  }
+
+  .banner dd {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1px;
+    background: #fff;
+    width: 60px;
+    margin: 0;
+  }
+  .banner dl dt {
+    margin: 0 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.5em;
+  }
+  .map {
+    height: 250px;
+  }
+  .content h3 {
+    font-size: 1.45em;
+    font-weight: normal;
+    margin-bottom: 1em;
+    line-height: 1;
+    margin: 0;
+  }
+  .content {
+    max-width: 1200px;
+    padding: 5.3px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
 }
 </style>
 

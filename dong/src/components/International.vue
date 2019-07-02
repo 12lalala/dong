@@ -7,6 +7,9 @@
                    slot="left">
         <mt-button icon="back">返回</mt-button>
       </router-link>
+      <div slot="right">
+        <mt-button @click="changeLanguage">{{lang}}</mt-button>
+      </div>
     </mt-header>
     <div class="banner">
       <dl v-show="title">
@@ -107,6 +110,7 @@ import Cookies from 'js-cookie'
 export default {
   data () {
     return {
+      lang: "",
       fit: 'fill',
       url1: require("../assets/international1.png"),
       url2: require("../assets/international2.png"),
@@ -168,9 +172,31 @@ export default {
         this.left = 1;
       }
     },
+    getLangageCookie () {
+      let language = Cookies.get('language');
+      if (language == "zh" || language == null) {
+        this.lang = "English";
+      }
+      else {
+        this.lang = "中文";
+      }
+    },
+    changeLanguage () {
+      if (this.lang == "中文") {
+        this.lang = "English";
+        this.$i18n.locale = "zh";
+        Cookies.set('language', "zh");
+      }
+      else {
+        this.lang = "中文";
+        this.$i18n.locale = "en";
+        Cookies.set('language', "en");
+      }
+    }
   },
   mounted () {
     this.getDeviceCookie()
+    this.getLangageCookie()
   }
 }
 </script>

@@ -3,7 +3,11 @@
     <mt-header fixed
                title="首页"
                style="position: absolute;z-index: 100;top: 0;right: 0;left: 0;position: fixed;"
-               v-show="goback"></mt-header>
+               v-show="goback">
+      <div slot="right">
+        <mt-button @click="changeLanguage">{{lang}}</mt-button>
+      </div>
+    </mt-header>
     <!-- 跑马灯 -->
     <div class="carousel">
       <el-carousel :interval="5000"
@@ -288,6 +292,7 @@ export default {
   name: "Hello",
   data () {
     return {
+      lang: "",
       url: "./News",
       fit: "cover",
       fixed: true,
@@ -379,6 +384,27 @@ export default {
         this.frindlink = 1;
       }
     },
+    getLangageCookie () {
+      let language = Cookies.get('language');
+      if (language == "zh" || language == null) {
+        this.lang = "English";
+      }
+      else {
+        this.lang = "中文";
+      }
+    },
+    changeLanguage () {
+      if (this.lang == "中文") {
+        this.lang = "English";
+        this.$i18n.locale = "zh";
+        Cookies.set('language', "zh");
+      }
+      else {
+        this.lang = "中文";
+        this.$i18n.locale = "en";
+        Cookies.set('language', "en");
+      }
+    }
   },
   mounted () {
     this.setBannerH()
@@ -386,6 +412,7 @@ export default {
       this.setBannerH()
     }, false)
     this.getDeviceCookie()
+    this.getLangageCookie()
   },
   created () { }
 }

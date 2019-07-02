@@ -179,6 +179,6 @@ export default {
     email: 'mailbox:',
     emailaddress: '',
   },
-  url: '/zh',
+  url: '/en',
 
 }

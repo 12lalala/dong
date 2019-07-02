@@ -17,7 +17,7 @@
     </div>
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item :to="{ path: '/' }">{{$t('Header.h1')}}</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/' }">&nbsp;{{$t('Header.h1')}}</el-breadcrumb-item>
         <el-breadcrumb-item>{{$t('Header.h2')}}</el-breadcrumb-item>
         <el-breadcrumb-item :to="{ path: '/Organization' }">{{$t('Header.h2_2')}}</el-breadcrumb-item>
       </el-breadcrumb>
@@ -25,8 +25,9 @@
     <div class="content">
       <div class="r">
         <h1>{{$t('Header.h2_2')}}</h1>
-        <p> <img :src="img"
-               alt=""></p>
+        <el-image class="photo"
+                  :src="img"
+                  :fit="fit"></el-image>
       </div>
       <div class="l"
            v-show="left">
@@ -82,6 +83,7 @@ export default {
   data () {
     return {
       img: require("../assets/organization.png"),
+      fit: 'fill',
       left: 1,
       headdown: 0,
       goback: 0,
@@ -190,6 +192,10 @@ export default {
   max-width: 910px;
   margin-top: 0px;
 }
+.content .r .photo {
+  width: 840px;
+  height: 365px;
+}
 .content .r h1 {
   font-weight: 400;
   margin: 5px;
@@ -212,10 +218,61 @@ export default {
   overflow: hidden;
   margin: 20px auto;
 }
-
 .headdown {
   position: absolute;
   z-index: 100;
+@media only screen and (max-width: 830px) {
+  .banner {
+    height: 220px;
+    background-image: url("../assets/contact.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  .banner dl {
+    margin: 0 auto;
+    color: #fff;
+    overflow: hidden;
+    padding: 0;
+    line-height: 220px;
+    text-align: center;
+  }
+
+  .banner dd {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1px;
+    background: #fff;
+    width: 60px;
+    margin: 0;
+  }
+  .banner dl dt {
+    margin: 0 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.5em;
+  }
+  .content .r {
+    float: right;
+    margin: 0px;
+  }
+  .content .r .photo {
+    width: 100%;
+    height: 200px;
+  }
+  .content .r h1 {
+    font-weight: 400;
+    margin: 5px;
+    font-size: 1.45em;
+  }
+  .content {
+    max-width: 1200px;
+    padding: 5.3px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
 }
 </style>
 

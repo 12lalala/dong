@@ -4,7 +4,7 @@
        v-show="footer">
     <div class="content">
       <div class="link">
-        <router-link to="/DGUSTIntroduction"
+        <router-link to="/IICIntroduction"
                      :title="$t('Header.h2')">{{$t('Header.h2')}}</router-link>
         <el-divider direction="vertical"></el-divider>
         <router-link to="/Contact"

@@ -1,7 +1,15 @@
 <template>
   <div>
+    <mt-header title="最新动态"
+               v-show="goback"
+               fixed>
+      <router-link to="/"
+                   slot="left">
+        <mt-button icon="back">返回</mt-button>
+      </router-link>
+    </mt-header>
     <div class="banner">
-      <dl>
+      <dl v-show="title">
         <dd></dd>
         <dt>{{$t('Header.h4_1')}}</dt>
         <dd></dd>
@@ -29,7 +37,8 @@
                      v-show="butshow">{{$t('Hello.readmore')}}</el-button>
         </div>
       </div>
-      <div class="l">
+      <div class="l"
+           v-show="left">
         <h3>{{$t('Header.h4')}}</h3>
         <el-divider></el-divider>
         <el-menu default-active="/News"
@@ -44,19 +53,94 @@
             <i class="el-icon-right"></i>
           </el-menu-item>
         </el-menu>
-
       </div>
+    </div>
+    <!-- <div class="about"
+         v-show="about">
+      <div style="margin: 0 auto;width: 130px;">
+        <el-link :href="downabout[0]"
+                 :underline="false">人才招聘</el-link>
+        <el-divider direction="vertical"></el-divider>
+        <el-link :href="downabout[1]"
+                 :underline="false">联系我们</el-link>
+      </div>
+    </div> -->
+    <!-- 移动端导航栏 -->
+    <div v-show="headdown"
+         class="headdown">
+      <mt-tabbar v-model="selected"
+                 :fixed="fixed">
+        <mt-tab-item id="ICC简介">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          ICC简介
+        </mt-tab-item>
+        <mt-tab-item id="组织架构">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          组织架构
+        </mt-tab-item>
+        <mt-tab-item id="最新动态">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          最新动态
+        </mt-tab-item>
+        <mt-tab-item id="通知公告">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          通知公告
+        </mt-tab-item>
+      </mt-tabbar>
     </div>
   </div>
 </template>
 
 <script>
+import Cookies from 'js-cookie'
 export default {
   data () {
     return {
       src: '/articles' + this.$t('url') + '/News/' + this.$route.params.id + '.html',
       hei: 500,
       butshow: true,
+      left: 1,
+      headdown: 0,
+      goback: 0,
+      about: 0,
+      title: 1,
+      fixed: true,
+      selected: '最新动态',
+      device: '',
+      downabout: [
+        './Contact',
+        './Talent',
+      ],
+    }
+  },
+  watch: {
+    selected (newval) {
+      switch (newval) {
+        case 'ICC简介':
+          this.$router.push({
+            path: '/IICIntroduction'
+          })
+          break;
+        case '组织架构':
+          this.$router.push({
+            path: '/Organization'
+          })
+          break;
+        case '最新动态':
+          this.$router.push({
+            path: '/News'
+          })
+          break;
+        case '通知公告':
+          this.$router.push({
+            path: '/Announcement'
+          })
+          break;
+      }
     }
   },
   methods: {
@@ -69,7 +153,25 @@ export default {
         this.hei = iframehei;
         this.butshow = false;
       }
-    }
+    },
+    getDeviceCookie () {
+      this.device = Cookies.get('device');
+      if (this.device == 'mobile') {
+        this.headdown = 1;
+        this.goback = 1;
+        this.title = 0;
+        this.left = 0;
+      }
+      else {
+        this.headdown = 0;
+        this.goback = 0;
+        this.title = 1;
+        this.left = 1;
+      }
+    },
+  },
+  mounted () {
+    this.getDeviceCookie()
   }
 }
 </script>
@@ -140,6 +242,23 @@ export default {
   overflow: hidden;
   margin: 20px auto;
 }
+/* .about {
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+} */
+.headdown {
+  position: absolute;
+  z-index: 100;
+}
+/* @media only screen and (max-width: 830px) {
+  .about {
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 60px;
+  }
+} */
 @media only screen and (max-width: 830px) {
   .banner {
     height: 220px;

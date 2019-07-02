@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
 
 // 引入cookies
 import Cookies from 'js-cookie'
@@ -23,6 +25,7 @@ import './assets/css/override-element-ui.css'
 Vue.use(VueRouter)
 
 Vue.use(ElementUI)
+Vue.use(MintUI)
 
 Vue.use(VueAMap)
 

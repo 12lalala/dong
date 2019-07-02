@@ -259,4 +259,50 @@ export default {
     margin-bottom: 60px;
   }
 } */
+@media only screen and (max-width: 830px) {
+  .banner {
+    height: 220px;
+    background-image: url("../assets/contact.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  .banner dl {
+    margin: 0 auto;
+    color: #fff;
+    overflow: hidden;
+    padding: 0;
+    line-height: 220px;
+    text-align: center;
+  }
+
+  .banner dd {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1px;
+    background: #fff;
+    width: 60px;
+    margin: 0;
+  }
+  .banner dl dt {
+    margin: 0 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.5em;
+  }
+  .content {
+    max-width: 1200px;
+    padding: 10.3px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+  .content .r {
+    float: right;
+    width: 100%;
+    /* height: 488px; */
+    margin: 0;
+  }
+}
 </style>

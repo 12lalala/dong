@@ -6,8 +6,8 @@
       <!-- logo -->
       <div class="logo">
         <img src="../assets/logo.jpg"
-             width="75px"
-             height="75px">
+             width="315px"
+             height="70px">
       </div>
       <div class="button">
         <el-dropdown @command="changelanguage"
@@ -140,11 +140,12 @@ export default {
 <style scoped>
 .header1 {
   height: 80px;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   display: block;
   background: #ffffff;
   overflow: hidden;
+  padding: 0 150px;
   border-top-style: solid;
   border-top-color: #409eff;
   border-top-width: 1px;

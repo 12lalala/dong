@@ -354,7 +354,6 @@ export default {
 <style scoped>
 /* 跑马灯 */
 .carousel {
-  margin-top: 50px;
   overflow: hidden;
 }
 
@@ -669,6 +668,10 @@ ul {
   }
 }
 @media only screen and (max-width: 830px) {
+  .carousel {
+    margin-top: 50px;
+    overflow: hidden;
+  }
   /* 分类 */
   ul,
   li,

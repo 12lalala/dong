@@ -150,7 +150,7 @@ export default {
         iframehei = window.frames['article'].document.body.scrollHeight;
       } catch (e) { iframehei = 500; }
       finally {
-        this.hei = iframehei;
+        this.hei = iframehei + 50;
         this.butshow = false;
       }
     },
@@ -219,7 +219,6 @@ export default {
 }
 .content .r {
   float: right;
-  margin: 20.3px;
   width: 70%;
   /* height: 488px; */
   margin-top: 0px;

@@ -1,7 +1,15 @@
 <template>
   <div>
+    <mt-header title="通知公告"
+               v-show="goback"
+               fixed>
+      <router-link to="/"
+                   slot="left">
+        <mt-button icon="back">返回</mt-button>
+      </router-link>
+    </mt-header>
     <div class="banner">
-      <dl>
+      <dl v-show="title">
         <dd></dd>
         <dt>{{$t('Header.h4_2')}}</dt>
         <dd></dd>
@@ -40,7 +48,8 @@
           </ul>
         </el-scrollbar>
       </div>
-      <div class="l">
+      <div class="l"
+           v-show="left">
         <h3>{{$t('Header.h4')}}</h3>
         <el-divider></el-divider>
         <el-menu default-active="/Announcement"
@@ -55,18 +64,68 @@
             <i class="el-icon-right"></i>
           </el-menu-item>
         </el-menu>
-
       </div>
+    </div>
+    <!-- <div class="about"
+         v-show="about">
+      <div style="margin: 0 auto;width: 130px;">
+        <el-link :href="downabout[0]"
+                 :underline="false">人才招聘</el-link>
+        <el-divider direction="vertical"></el-divider>
+        <el-link :href="downabout[1]"
+                 :underline="false">联系我们</el-link>
+      </div>
+    </div> -->
+    <!-- 移动端导航栏 -->
+    <div v-show="headdown"
+         class="headdown">
+      <mt-tabbar v-model="selected"
+                 :fixed="fixed">
+        <mt-tab-item id="ICC简介">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          ICC简介
+        </mt-tab-item>
+        <mt-tab-item id="组织架构">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          组织架构
+        </mt-tab-item>
+        <mt-tab-item id="最新动态">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          最新动态
+        </mt-tab-item>
+        <mt-tab-item id="通知公告">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          通知公告
+        </mt-tab-item>
+      </mt-tabbar>
     </div>
   </div>
 </template>
 
 <script>
+import Cookies from 'js-cookie'
 export default {
   data () {
     return {
       fit: "fill",
       url: require("../assets/newimages/1.png"),
+      left: 1,
+      headdown: 0,
+      goback: 0,
+      about: 0,
+      title: 1,
+      fixed: true,
+      selected: '通知公告',
+      device: '',
+      downabout: [
+        './Contact',
+        './Talent',
+      ],
+      // 列表显示数量
       item: 5,
       articles: [
         {
@@ -105,19 +164,62 @@ export default {
           introduction: this.$t('Announce.articles.article1.introduction')
         },
       ],
-
+    }
+  },
+  watch: {
+    selected (newval) {
+      switch (newval) {
+        case 'ICC简介':
+          this.$router.push({
+            path: '/IICIntroduction'
+          })
+          break;
+        case '组织架构':
+          this.$router.push({
+            path: '/Organization'
+          })
+          break;
+        case '最新动态':
+          this.$router.push({
+            path: '/News'
+          })
+          break;
+        case '通知公告':
+          this.$router.push({
+            path: '/Announcement'
+          })
+          break;
+      }
     }
   },
   methods: {
     load () {
       this.item += 2
-    }
+    },
+    getDeviceCookie () {
+      this.device = Cookies.get('device');
+      if (this.device == 'mobile') {
+        this.headdown = 1;
+        this.goback = 1;
+        this.title = 0;
+        this.left = 0;
+      }
+      else {
+        this.headdown = 0;
+        this.goback = 0;
+        this.title = 1;
+        this.left = 1;
+      }
+    },
+  },
+  mounted () {
+    this.getDeviceCookie()
   }
 }
 </script>
 <style scoped>
 /* 清除rooter-link的样式 */
-a {
+.n1 a {
   color: #409eff;
   text-decoration: none;
 }
@@ -236,6 +338,23 @@ a {
   overflow: hidden;
   margin: 20px auto;
 }
+/* .about {
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+} */
+.headdown {
+  position: absolute;
+  z-index: 100;
+}
+/* @media only screen and (max-width: 830px) {
+  .about {
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 60px;
+  }
+} */
 @media only screen and (max-width: 830px) {
   .banner {
     height: 220px;

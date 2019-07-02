@@ -1,7 +1,15 @@
 <template>
   <div>
+    <mt-header title=" 联系我们"
+               v-show="goback"
+               fixed>
+      <router-link to="/"
+                   slot="left">
+        <mt-button icon="back">返回</mt-button>
+      </router-link>
+    </mt-header>
     <div class="banner">
-      <dl>
+      <dl v-show="title">
         <dd></dd>
         <dt>{{$t('Header.h6')}}</dt>
         <dd></dd>
@@ -42,10 +50,38 @@
                  target="_blank">{{email.email}}</el-link>
       </p>
     </div>
+    <!-- 移动端导航栏 -->
+    <div v-show="headdown"
+         class="headdown">
+      <mt-tabbar v-model="selected"
+                 :fixed="fixed">
+        <mt-tab-item id="ICC简介">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          ICC简介
+        </mt-tab-item>
+        <mt-tab-item id="组织架构">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          组织架构
+        </mt-tab-item>
+        <mt-tab-item id="人才招聘">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          人才招聘
+        </mt-tab-item>
+        <mt-tab-item id="联系我们">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          联系我们
+        </mt-tab-item>
+      </mt-tabbar>
+    </div>
   </div>
 </template>
 
 <script>
+import Cookies from 'js-cookie'
 export default {
   name: "Contact",
   data () {
@@ -61,7 +97,66 @@ export default {
         email: this.$t('Contact.emailaddress'),
         url: "",
       },
+      headdown: 0,
+      goback: 0,
+      about: 0,
+      title: 1,
+      fixed: true,
+      selected: '联系我们',
+      device: '',
+      downabout: [
+        './Contact',
+        './Talent',
+      ],
     }
+  },
+  watch: {
+    selected (newval) {
+      switch (newval) {
+        case 'ICC简介':
+          this.$router.push({
+            path: '/IICIntroduction'
+          })
+          break;
+        case '组织架构':
+          this.$router.push({
+            path: '/Organization'
+          })
+          break;
+        case '人才招聘':
+          this.$router.push({
+            path: '/Talent'
+          })
+          break;
+        case '联系我们':
+          this.$router.push({
+            path: '/Contact'
+          })
+          break;
+      }
+    }
+  },
+  methods: {
+    getDeviceCookie () {
+      this.device = Cookies.get('device');
+      if (this.device == 'mobile') {
+        this.headdown = 1;
+        this.goback = 1;
+        this.about = 1;
+        this.title = 0;
+        this.left = 0;
+      }
+      else {
+        this.headdown = 0;
+        this.goback = 0;
+        this.about = 0;
+        this.title = 1;
+        this.left = 1;
+      }
+    },
+  },
+  mounted () {
+    this.getDeviceCookie()
   }
 }
 </script>
@@ -135,6 +230,10 @@ export default {
   overflow: hidden;
   margin: 20px auto;
 }
+.headdown {
+  position: absolute;
+  z-index: 100;
+}
 @media only screen and (max-width: 830px) {
   .banner {
     height: 220px;
@@ -184,6 +283,5 @@ export default {
     overflow: hidden;
     margin-bottom: 50px;
   }
-}
 </style>
 

@@ -17,7 +17,7 @@
     </div>
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item :to="{ path: '/' }">{{$t('Header.h1')}}</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/' }">&nbsp;{{$t('Header.h1')}}</el-breadcrumb-item>
         <el-breadcrumb-item>{{$t('Header.h3')}}</el-breadcrumb-item>
         <el-breadcrumb-item :to="{ path: '/Investment' }">{{$t('Hello.p3m')}}</el-breadcrumb-item>
       </el-breadcrumb>
@@ -28,7 +28,7 @@
         <p>{{$t('Division.technology')}}</p>
         <br>
         <br>
-        <el-image style="width: 853px; height: 289px"
+        <el-image class="photo"
                   :src="url"
                   :fit="fit"></el-image>
       </div>
@@ -215,6 +215,10 @@ export default {
   max-width: 910px;
   margin-top: 0px;
 }
+.content .r .photo {
+  width: 853px;
+  height: 289px;
+}
 .content .r h1 {
   font-weight: 400;
   margin: 5px;
@@ -262,4 +266,62 @@ export default {
     margin-bottom: 60px;
   }
 } */
+@media only screen and (max-width: 830px) {
+  .banner {
+    height: 220px;
+    background-image: url("../assets/contact.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  .banner dl {
+    margin: 0 auto;
+    color: #fff;
+    overflow: hidden;
+    padding: 0;
+    line-height: 220px;
+    text-align: center;
+  }
+
+  .banner dd {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1px;
+    background: #fff;
+    width: 60px;
+    margin: 0;
+  }
+  .banner dl dt {
+    margin: 0 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.5em;
+  }
+  .content .r {
+    float: right;
+    margin: 0px;
+  }
+  .content .r .photo {
+    width: 100%;
+    height: 200px;
+  }
+  .content .r h1 {
+    font-weight: 400;
+    margin: 5px;
+    font-size: 1.45em;
+  }
+  .content .r p {
+    line-height: 1.8;
+    text-indent: 40px;
+    margin: 8px;
+  }
+  .content {
+    max-width: 1200px;
+    padding: 5.3px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+}
 </style>

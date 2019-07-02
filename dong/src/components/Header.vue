@@ -5,7 +5,7 @@
          v-show="head">
       <!-- logo -->
       <div class="logo">
-        <img src="../assets/logo.jpg"
+        <img src="../assets/logo.png"
              width="315px"
              height="70px">
       </div>
@@ -139,22 +139,22 @@ export default {
 
 <style scoped>
 .header1 {
-  height: 80px;
+  height: 83px;
   /* max-width: 1200px; */
   margin: 0 auto;
   display: block;
   background: #ffffff;
   overflow: hidden;
   padding: 0 150px;
-  border-top-style: solid;
-  border-top-color: #409eff;
-  border-top-width: 1px;
 }
 
 .header2 {
   min-width: 600px;
   float: right;
   margin-top: 20px;
+  border-top-style: solid;
+  border-top-color: #409eff;
+  border-top-width: 2px;
 }
 
 .logo {

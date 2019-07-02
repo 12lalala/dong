@@ -177,7 +177,7 @@ export default {
 <style scoped>
 .banner {
   height: 380px;
-  background-image: url("../assets/center.png");
+  background-image: url("../assets/center.jpg");
   background-repeat: no-repeat;
   overflow: hidden;
 }

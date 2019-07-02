@@ -11,9 +11,9 @@
                    :height="bannerH + 'px'">
         <el-carousel-item v-for="(img,index) in imgList"
                           :key="index">
-          <img class="img2"
-               :src="img.url"
-               ref="imgHeight">
+          <el-image class="img2"
+                    :src="img.url"
+                    :fit="fit"></el-image>
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -86,7 +86,7 @@
                    :body-style="{ padding: '15px' }"
                    shadow="hover">
             <div>
-              <el-image style="width: 550px; height: 250px"
+              <el-image class="cardimg"
                         :src="aboutimage"
                         :fit="fit"></el-image>
               <div>
@@ -99,7 +99,8 @@
             </div>
           </el-card>
         </div>
-        <div class="card">
+        <div class="card"
+             v-show="cardpc">
           <h2>&nbsp;&nbsp;{{$t('Header.h4_1')}}</h2>
           <el-card class="box-card"
                    :body-style="{ padding: '15px' }"
@@ -109,7 +110,7 @@
                 <el-carousel height="300px">
                   <el-carousel-item v-for="(img,index) in dynamic"
                                     :key="index">
-                    <el-image style="width: 550px; height: 300px"
+                    <el-image class="cardimg"
                               :src="img.url"
                               :fit="fit"></el-image>
                   </el-carousel-item>
@@ -118,9 +119,37 @@
               <div class="link"
                    v-for="(title,index) in titles"
                    :key="index">
-                <el-link :href="title.url"
+                <el-link :href="url"
                          :underline="false"
-                         icon="el-icon-right">{{title.title}}</el-link>
+                         icon="el-icon-right">{{title.titlepc}}</el-link>
+                <span>{{title.time}}</span>
+              </div>
+            </div>
+          </el-card>
+        </div>
+        <div class="card"
+             v-show="cardmb">
+          <h2>&nbsp;&nbsp;{{$t('Header.h4_1')}}</h2>
+          <el-card class="box-card"
+                   :body-style="{ padding: '15px' }"
+                   shadow="hover">
+            <div>
+              <div class="block">
+                <el-carousel height="200px">
+                  <el-carousel-item v-for="(img,index) in dynamic"
+                                    :key="index">
+                    <el-image class="cardimg"
+                              :src="img.url"
+                              :fit="fit"></el-image>
+                  </el-carousel-item>
+                </el-carousel>
+              </div>
+              <div class="link"
+                   v-for="(title,index) in titles"
+                   :key="index">
+                <el-link :href="url"
+                         :underline="false"
+                         icon="el-icon-right">{{title.titlemb}}</el-link>
                 <span>{{title.time}}</span>
               </div>
             </div>
@@ -128,7 +157,8 @@
         </div>
       </div>
     </div>
-    <div class="friendLinks">
+    <div class="friendLinks"
+         v-show="frindlink">
       <div class="container">
         <div class="row">
           <div class="col-xs-2">
@@ -258,21 +288,26 @@ export default {
   name: "Hello",
   data () {
     return {
+      url: "./News",
+      fit: "cover",
       fixed: true,
       about: 0,
       selected: '首页',
       device: '',
       headdown: 0,
       goback: 0,
+      frindlink: 1,
+      cardpc: 1,
+      cardmb: 0,
       bannerH: 343,
       downabout: [
         './Contact',
         './Talent',
       ],
       imgList: [
-        { url: require("../assets/hello.jpg") },
-        { url: require("../assets/hello.jpg") },
-        { url: require("../assets/hello.jpg") }
+        { url: require("../assets/hello1.jpg") },
+        { url: require("../assets/hello1.jpg") },
+        { url: require("../assets/hello1.jpg") }
       ],
       imgCard: [
         require("../assets/imgcard1.png"),
@@ -288,12 +323,11 @@ export default {
       ],
       abouttxt: this.$t('Hello.card.about.abouttxt'),
       titles: [
-        { title: this.$t('Hello.card.titles[0]'), time: "2019-04-02", url: "/article/news/1" },
-        { title: this.$t('Hello.card.titles[1]'), time: "2019-02-18", url: "/article/news/1" },
-        { title: this.$t('Hello.card.titles[2]'), time: "2019-02-15", url: "/article/news/1" },
+        { titlepc: this.$t('Hello.card.titlespc[0]'), titlemb: this.$t('Hello.card.titlesmb[0]'), time: "2019-04-02", },
+        { titlepc: this.$t('Hello.card.titlespc[1]'), titlemb: this.$t('Hello.card.titlesmb[1]'), time: "2019-02-18", },
+        { titlepc: this.$t('Hello.card.titlespc[2]'), titlemb: this.$t('Hello.card.titlesmb[2]'), time: "2019-02-15", },
       ],
       aboutimage: require("../assets/about_pic.png"),
-      fit: "cover",
     }
   },
   watch: {
@@ -332,11 +366,17 @@ export default {
         this.headdown = 1;
         this.about = 1;
         this.goback = 1;
+        this.cardmb = 1;
+        this.cardpc = 0;
+        this.frindlink = 0;
       }
       else {
         this.goback = 0;
         this.headdown = 0;
         this.about = 0;
+        this.cardmb = 0;
+        this.cardpc = 1;
+        this.frindlink = 1;
       }
     },
   },
@@ -708,7 +748,7 @@ ul {
     margin-bottom: 1em;
   }
   .part1 ul a dd h5 {
-    font-size: 1.25em;
+    font-size: 1em;
     margin-bottom: 0.35em;
     font-weight: normal;
     color: #fff;
@@ -721,15 +761,20 @@ ul {
     max-width: 1000px;
     margin: 0px auto;
     overflow: hidden;
+    margin-bottom: 60px;
   }
   .cards div {
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
   }
   .card {
-    max-width: 600px;
-    margin: 20px 5px auto;
+    max-width: 100%;
+    margin: 20px 0px auto;
     float: left;
+  }
+  .cardimg {
+    width: 100%;
+    height: 200px;
   }
   /* .about {
     margin: 0 auto;

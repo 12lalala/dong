@@ -283,5 +283,5 @@ export default {
     overflow: hidden;
     margin-bottom: 50px;
   }
+}
 </style>
-

@@ -139,7 +139,7 @@ export default {
 
 <style scoped>
 .header1 {
-  height: 80px;
+  height: 83px;
   /* max-width: 1200px; */
   margin: 0 auto;
   display: block;

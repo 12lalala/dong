@@ -232,6 +232,7 @@ export default {
 .headdown {
   position: absolute;
   z-index: 100;
+}
 @media only screen and (max-width: 830px) {
   .banner {
     height: 220px;
@@ -287,4 +288,3 @@ export default {
   }
 }
 </style>
-

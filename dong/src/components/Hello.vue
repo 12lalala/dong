@@ -119,7 +119,7 @@
               <div class="link"
                    v-for="(title,index) in titles"
                    :key="index">
-                <el-link :href="title.url"
+                <el-link :href="url"
                          :underline="false"
                          icon="el-icon-right">{{title.titlepc}}</el-link>
                 <span>{{title.time}}</span>
@@ -147,7 +147,7 @@
               <div class="link"
                    v-for="(title,index) in titles"
                    :key="index">
-                <el-link :href="title.url"
+                <el-link :href="url"
                          :underline="false"
                          icon="el-icon-right">{{title.titlemb}}</el-link>
                 <span>{{title.time}}</span>
@@ -288,6 +288,7 @@ export default {
   name: "Hello",
   data () {
     return {
+      url: "./News",
       fit: "cover",
       fixed: true,
       about: 0,
@@ -322,9 +323,9 @@ export default {
       ],
       abouttxt: this.$t('Hello.card.about.abouttxt'),
       titles: [
-        { titlepc: this.$t('Hello.card.titlespc[0]'), titlemb: this.$t('Hello.card.titlesmb[0]'), time: "2019-04-02", url: "/article/news/1" },
-        { titlepc: this.$t('Hello.card.titlespc[1]'), titlemb: this.$t('Hello.card.titlesmb[0]'), time: "2019-02-18", url: "/article/news/1" },
-        { titlepc: this.$t('Hello.card.titlespc[2]'), titlemb: this.$t('Hello.card.titlesmb[0]'), time: "2019-02-15", url: "/article/news/1" },
+        { titlepc: this.$t('Hello.card.titlespc[0]'), titlemb: this.$t('Hello.card.titlesmb[0]'), time: "2019-04-02", },
+        { titlepc: this.$t('Hello.card.titlespc[1]'), titlemb: this.$t('Hello.card.titlesmb[1]'), time: "2019-02-18", },
+        { titlepc: this.$t('Hello.card.titlespc[2]'), titlemb: this.$t('Hello.card.titlesmb[2]'), time: "2019-02-15", },
       ],
       aboutimage: require("../assets/about_pic.png"),
     }

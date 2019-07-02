@@ -1,7 +1,15 @@
 <template>
   <div>
+    <mt-header title="新工科发展引领区"
+               v-show="goback"
+               fixed>
+      <router-link to="/"
+                   slot="left">
+        <mt-button icon="back">返回</mt-button>
+      </router-link>
+    </mt-header>
     <div class="banner">
-      <dl>
+      <dl v-show="title">
         <dd></dd>
         <dt>{{$t('Hello.p2')}}</dt>
         <dd></dd>
@@ -28,7 +36,8 @@
                   :src="url2"
                   :fit="fit"></el-image>
       </div>
-      <div class="l">
+      <div class="l"
+           v-show="left">
         <h3>{{$t('Header.h3')}}</h3>
         <el-divider></el-divider>
         <el-menu default-active="/International"
@@ -53,17 +62,115 @@
         </el-menu>
       </div>
     </div>
+    <!-- <div class="about"
+         v-show="about">
+      <div style="margin: 0 auto;width: 130px;">
+        <el-link :href="downabout[0]"
+                 :underline="false">人才招聘</el-link>
+        <el-divider direction="vertical"></el-divider>
+        <el-link :href="downabout[1]"
+                 :underline="false">联系我们</el-link>
+      </div>
+    </div> -->
+    <!-- 移动端导航栏 -->
+    <div v-show="headdown"
+         class="headdown">
+      <mt-tabbar v-model="selected"
+                 :fixed="fixed">
+        <mt-tab-item id="人才培育">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          人才培育
+        </mt-tab-item>
+        <mt-tab-item id="发展引领">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          发展引领
+        </mt-tab-item>
+        <mt-tab-item id="科技创新">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          科技创新
+        </mt-tab-item>
+        <mt-tab-item id="城市功能">
+          <span slot="icon"
+                class="el-icon-s-home"></span>
+          城市功能
+        </mt-tab-item>
+      </mt-tabbar>
+    </div>
   </div>
 </template>
 
 <script>
+import Cookies from 'js-cookie'
 export default {
   data () {
     return {
       fit: 'fill',
       url1: require("../assets/international1.png"),
-      url2: require("../assets/international2.png")
+      url2: require("../assets/international2.png"),
+      left: 1,
+      headdown: 0,
+      goback: 0,
+      about: 0,
+      title: 1,
+      fixed: true,
+      selected: '发展引领',
+      device: '',
+      downabout: [
+        './Contact',
+        './Talent',
+      ],
     }
+  },
+  watch: {
+    selected (newval) {
+      switch (newval) {
+        case '人才培育':
+          this.$router.push({
+            path: '/Tech'
+          })
+          break;
+        case '发展引领':
+          this.$router.push({
+            path: '/International'
+          })
+          break;
+        case '科技创新':
+          this.$router.push({
+            path: '/Investment'
+          })
+          break;
+        case '城市功能':
+          this.$router.push({
+            path: '/Industry'
+          })
+          break;
+      }
+    }
+  },
+  methods: {
+    getDeviceCookie () {
+      this.device = Cookies.get('device');
+      if (this.device == 'mobile') {
+        this.headdown = 1;
+        this.goback = 1;
+        this.about = 1;
+        this.title = 0;
+        this.left = 0;
+      }
+      else {
+        this.headdown = 0;
+        this.goback = 0;
+        this.about = 0;
+        this.title = 1;
+        this.left = 1;
+      }
+    },
+  },
+  mounted () {
+    this.getDeviceCookie()
   }
 }
 </script>
@@ -143,4 +250,21 @@ export default {
   overflow: hidden;
   margin: 20px auto;
 }
+/* .about {
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+} */
+.headdown {
+  position: absolute;
+  z-index: 100;
+}
+/* @media only screen and (max-width: 830px) {
+  .about {
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 60px;
+  }
+} */
 </style>

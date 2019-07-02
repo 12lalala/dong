@@ -1,5 +1,8 @@
 <template>
   <div>
+    <mt-header fixed
+               title="首页"
+               style="position: absolute;z-index: 100;top: 0;right: 0;left: 0;position: fixed;"></mt-header>
     <!-- 跑马灯 -->
     <div class="carousel">
       <el-carousel :interval="5000"
@@ -207,7 +210,7 @@
       </div>
 
     </div>
-    <div class="about"
+    <!-- <div class="about"
          v-show="about">
       <div style="margin: 0 auto;width: 130px;">
         <el-link :href="downabout[0]"
@@ -216,7 +219,7 @@
         <el-link :href="downabout[1]"
                  :underline="false">联系我们</el-link>
       </div>
-    </div>
+    </div> -->
 
     <!-- 移动端导航栏 -->
     <div v-show="headdown"
@@ -347,6 +350,7 @@ export default {
 <style scoped>
 /* 跑马灯 */
 .carousel {
+  margin-top: 50px;
   overflow: hidden;
 }
 
@@ -494,11 +498,11 @@ a:visited {
   position: absolute;
   z-index: 100;
 }
-.about {
+/* .about {
   margin: 0 auto;
   width: 100%;
   overflow: hidden;
-}
+} */
 /* 友情链接 */
 .friendLinks {
   width: 100%;
@@ -720,11 +724,11 @@ ul {
     margin: 20px 5px auto;
     float: left;
   }
-  .about {
+  /* .about {
     margin: 0 auto;
     width: 100%;
     overflow: hidden;
     margin-bottom: 60px;
-  }
+  } */
 }
 </style>

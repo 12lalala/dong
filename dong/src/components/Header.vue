@@ -88,7 +88,7 @@ export default {
         language = Cookies.get('language');
         // eslint-disable-next-line no-empty
       } catch (e) { }
-      if (language == "zh" || language == "") {
+      if (language == "zh" || language == null) {
         this.language = "中文";
         this.$i18n.locale = "zh";
       }

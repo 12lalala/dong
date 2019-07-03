@@ -64,7 +64,7 @@
           </span>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item command="首页">首页</el-dropdown-item>
-            <el-dropdown-item command="ICC简介">ICC简介</el-dropdown-item>
+            <el-dropdown-item command="ICC简介">ICI简介</el-dropdown-item>
             <el-dropdown-item command="组织架构">组织架构</el-dropdown-item>
             <el-dropdown-item command="国际高端人才培育区">国际高端人才培育区</el-dropdown-item>
             <el-dropdown-item command="新工科发展引领区">新工科发展引领区</el-dropdown-item>

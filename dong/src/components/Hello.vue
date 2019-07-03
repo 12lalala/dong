@@ -20,7 +20,8 @@
                      :title="$t('Hello.p1m')">
           <dl>
             <dt>
-              <img :src="imgCard[0]"
+              <img style="object-fit: cover; width: 280px; height: 170px;"
+                   :src="imgCard[0]"
                    :alt="$t('Hello.p1')">
             </dt>
             <dd>
@@ -34,7 +35,8 @@
                      :title="$t('Hello.p2m')">
           <dl>
             <dt>
-              <img :src="imgCard[1]"
+              <img style="object-fit: cover; width: 280px; height: 170px;"
+                   :src="imgCard[1]"
                    :alt="$t('Hello.p2')">
             </dt>
             <dd>
@@ -48,7 +50,8 @@
                      :title="$t('Hello.p3m')">
           <dl>
             <dt>
-              <img :src="imgCard[2]"
+              <img style="object-fit: cover; width: 280px; height: 170px;"
+                   :src="imgCard[2]"
                    :alt="$t('Hello.p3')">
             </dt>
             <dd>
@@ -62,7 +65,8 @@
                      :title="$t('Hello.p4m')">
           <dl>
             <dt>
-              <img :src="imgCard[3]"
+              <img style="object-fit: cover; width: 280px; height: 170px;"
+                   :src="imgCard[3]"
                    :alt="$t('Hello.p4')">
             </dt>
             <dd>

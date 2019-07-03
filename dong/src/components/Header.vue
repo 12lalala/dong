@@ -6,8 +6,8 @@
       <!-- logo -->
       <div class="logo">
         <img src="../assets/logo.png"
-             width="315px"
-             height="70px">
+             width="310px"
+             height="65px">
       </div>
       <div class="button">
         <el-dropdown @command="changelanguage"
@@ -51,6 +51,37 @@
         </el-menu>
       </div>
     </div>
+    <mt-header v-show="goback"
+               style="background: #fff;color: #409eff;position: absolute;z-index: 100;top: 0;right: 0;left: 0;position: fixed;"
+               fixed
+               title="东莞理工学院">
+      <div slot="left">
+        <el-dropdown @command="gogogo"
+                     trigger="click">
+          <span class="el-dropdown-link"
+                id="el-dropdown-link">
+            {{gogo}}<i class="el-icon-arrow-down el-icon--right"></i>
+          </span>
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item command="首页">首页</el-dropdown-item>
+            <el-dropdown-item command="ICC简介">ICC简介</el-dropdown-item>
+            <el-dropdown-item command="组织架构">组织架构</el-dropdown-item>
+            <el-dropdown-item command="国际高端人才培育区">国际高端人才培育区</el-dropdown-item>
+            <el-dropdown-item command="新工科发展引领区">新工科发展引领区</el-dropdown-item>
+            <el-dropdown-item command="科技创新示范区">科技创新示范区</el-dropdown-item>
+            <el-dropdown-item command="城市功能区域配套区">城市功能区域配套区</el-dropdown-item>
+            <el-dropdown-item command="最新动态">最新动态</el-dropdown-item>
+            <el-dropdown-item command="通知公告">通知公告</el-dropdown-item>
+            <el-dropdown-item command="联系我们">联系我们</el-dropdown-item>
+            <el-dropdown-item command="人才招聘">人才招聘</el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
+      </div>
+      <div slot="right">
+        <mt-button @click="changeLanguage"
+                   style="color: #409eff;">{{lang}}</mt-button>
+      </div>
+    </mt-header>
   </div>
 </template>
 
@@ -64,6 +95,9 @@ export default {
       language: "中文",
       flag: "",
       head: 1,
+      goback: 0,
+      gogo: "",
+      lang: "",
     }
   },
   methods: {
@@ -76,9 +110,11 @@ export default {
       this.$i18n.locale = command;
       if (command == "zh") {
         this.language = "中文";
+        location.reload();
       }
       else {
         this.language = "English";
+        location.reload();
       }
       Cookies.set('language', command)
     },
@@ -126,6 +162,116 @@ export default {
         Cookies.set('device', "mobile")
       }
     },
+    getDeviceCookie () {
+      this.device = Cookies.get('device');
+      if (this.device == 'mobile') {
+        this.headdown = 1;
+        this.goback = 1;
+        this.about = 1;
+        this.title = 0;
+        this.left = 0;
+      }
+      else {
+        this.headdown = 0;
+        this.goback = 0;
+        this.about = 0;
+        this.title = 1;
+        this.left = 1;
+      }
+    },
+    getLangageCookie () {
+      let language = Cookies.get('language');
+      if (language == "zh" || language == null) {
+        this.lang = "English";
+      }
+      else {
+        this.lang = "中文";
+      }
+    },
+    changeLanguage () {
+      if (this.lang == "中文") {
+        this.lang = "English";
+        this.$i18n.locale = "zh";
+        Cookies.set('language', "zh");
+        location.reload();
+      }
+      else {
+        this.lang = "中文";
+        this.$i18n.locale = "en";
+        Cookies.set('language', "en");
+        location.reload();
+      }
+    },
+    gogogo (command) {
+      this.gogo = command;
+      Cookies.set('gogogo', command);
+      switch (this.gogo) {
+        case '首页':
+          this.$router.push({
+            path: '/'
+          })
+          break;
+        case 'ICC简介':
+          this.$router.push({
+            path: '/IICIntroduction'
+          })
+          break;
+        case '组织架构':
+          this.$router.push({
+            path: '/Organization'
+          })
+          break;
+        case '国际高端人才培育区':
+          this.$router.push({
+            path: '/Tech'
+          })
+          break;
+        case '新工科发展引领区':
+          this.$router.push({
+            path: '/International'
+          })
+          break;
+        case '科技创新示范区':
+          this.$router.push({
+            path: '/Investment'
+          })
+          break;
+        case '城市功能区域配套区':
+          this.$router.push({
+            path: '/Industry'
+          })
+          break;
+        case '最新动态':
+          this.$router.push({
+            path: '/News'
+          })
+          break;
+        case '通知公告':
+          this.$router.push({
+            path: '/Announcement'
+          })
+          break;
+        case '联系我们':
+          this.$router.push({
+            path: '/Contact'
+          })
+          break;
+        case '人才招聘':
+          this.$router.push({
+            path: '/Talent'
+          })
+          break;
+      }
+    },
+    getGogogoCookie () {
+      let gogoC = Cookies.get('gogogo');
+      if (gogoC == "首页" || gogoC == null) {
+        this.gogo = "首页";
+      }
+      else {
+        this.gogo = gogoC;
+      }
+    }
   },
   mounted () {
     this.getActiveNav(window.location.href);
@@ -133,6 +279,9 @@ export default {
     this.flag = this.IsPC();
     this.setCookie()
     this.changeHead();
+    this.getDeviceCookie()
+    this.getGogogoCookie()
+    this.getLangageCookie()
   }
 }
 </script>
@@ -171,6 +320,10 @@ export default {
 .el-dropdown-link {
   cursor: pointer;
   color: #409eff;
+}
+#el-dropdown-link {
+  color: #409eff;
+  margin-left: 5px;
 }
 .el-icon-arrow-down {
   font-size: 12px;

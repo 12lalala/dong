@@ -1,13 +1,5 @@
 <template>
   <div>
-    <mt-header title="最新动态"
-               v-show="goback"
-               fixed>
-      <router-link to="/"
-                   slot="left">
-        <mt-button icon="back">返回</mt-button>
-      </router-link>
-    </mt-header>
     <div class="banner">
       <dl v-show="title">
         <dd></dd>
@@ -76,33 +68,6 @@
                  :underline="false">联系我们</el-link>
       </div>
     </div> -->
-    <!-- 移动端导航栏 -->
-    <div v-show="headdown"
-         class="headdown">
-      <mt-tabbar v-model="selected"
-                 :fixed="fixed">
-        <mt-tab-item id="ICC简介">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          ICC简介
-        </mt-tab-item>
-        <mt-tab-item id="组织架构">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          组织架构
-        </mt-tab-item>
-        <mt-tab-item id="最新动态">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          最新动态
-        </mt-tab-item>
-        <mt-tab-item id="通知公告">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          通知公告
-        </mt-tab-item>
-      </mt-tabbar>
-    </div>
   </div>
 </template>
 
@@ -164,32 +129,6 @@ export default {
           introduction: this.$t('News.articles.article1.introduction')
         },
       ],
-    }
-  },
-  watch: {
-    selected (newval) {
-      switch (newval) {
-        case 'ICC简介':
-          this.$router.push({
-            path: '/IICIntroduction'
-          })
-          break;
-        case '组织架构':
-          this.$router.push({
-            path: '/Organization'
-          })
-          break;
-        case '最新动态':
-          this.$router.push({
-            path: '/News'
-          })
-          break;
-        case '通知公告':
-          this.$router.push({
-            path: '/Announcement'
-          })
-          break;
-      }
     }
   },
   methods: {

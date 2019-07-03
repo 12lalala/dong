@@ -1,13 +1,5 @@
 <template>
   <div>
-    <mt-header title="新工科发展引领区"
-               v-show="goback"
-               fixed>
-      <router-link to="/"
-                   slot="left">
-        <mt-button icon="back">返回</mt-button>
-      </router-link>
-    </mt-header>
     <div class="banner">
       <dl v-show="title">
         <dd></dd>
@@ -73,32 +65,6 @@
       </div>
     </div> -->
     <!-- 移动端导航栏 -->
-    <div v-show="headdown"
-         class="headdown">
-      <mt-tabbar v-model="selected"
-                 :fixed="fixed">
-        <mt-tab-item id="人才培育">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          人才培育
-        </mt-tab-item>
-        <mt-tab-item id="发展引领">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          发展引领
-        </mt-tab-item>
-        <mt-tab-item id="科技创新">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          科技创新
-        </mt-tab-item>
-        <mt-tab-item id="城市功能">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          城市功能
-        </mt-tab-item>
-      </mt-tabbar>
-    </div>
   </div>
 </template>
 
@@ -122,32 +88,6 @@ export default {
         './Contact',
         './Talent',
       ],
-    }
-  },
-  watch: {
-    selected (newval) {
-      switch (newval) {
-        case '人才培育':
-          this.$router.push({
-            path: '/Tech'
-          })
-          break;
-        case '发展引领':
-          this.$router.push({
-            path: '/International'
-          })
-          break;
-        case '科技创新':
-          this.$router.push({
-            path: '/Investment'
-          })
-          break;
-        case '城市功能':
-          this.$router.push({
-            path: '/Industry'
-          })
-          break;
-      }
     }
   },
   methods: {

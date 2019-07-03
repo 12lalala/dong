@@ -1,9 +1,5 @@
 <template>
   <div>
-    <mt-header fixed
-               title="首页"
-               style="position: absolute;z-index: 100;top: 0;right: 0;left: 0;position: fixed;"
-               v-show="goback"></mt-header>
     <!-- 跑马灯 -->
     <div class="carousel">
       <el-carousel :interval="5000"
@@ -251,34 +247,6 @@
                  :underline="false">联系我们</el-link>
       </div>
     </div> -->
-
-    <!-- 移动端导航栏 -->
-    <div v-show="headdown"
-         class="headdown">
-      <mt-tabbar v-model="selected"
-                 :fixed="fixed">
-        <mt-tab-item id="首页">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          首页
-        </mt-tab-item>
-        <mt-tab-item id="关于我们">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          关于我们
-        </mt-tab-item>
-        <mt-tab-item id="板块分区">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          板块分区
-        </mt-tab-item>
-        <mt-tab-item id="新闻动态">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          新闻动态
-        </mt-tab-item>
-      </mt-tabbar>
-    </div>
   </div>
 </template>
 
@@ -330,32 +298,6 @@ export default {
       aboutimage: require("../assets/about_pic.png"),
     }
   },
-  watch: {
-    selected (newval) {
-      switch (newval) {
-        case '首页':
-          this.$router.push({
-            path: '/'
-          })
-          break;
-        case '关于我们':
-          this.$router.push({
-            path: '/IICIntroduction'
-          })
-          break;
-        case '板块分区':
-          this.$router.push({
-            path: '/Tech'
-          })
-          break;
-        case '新闻动态':
-          this.$router.push({
-            path: '/News'
-          })
-          break;
-      }
-    }
-  },
   methods: {
     setBannerH () {
       this.bannerH = document.body.clientWidth / 3.5
@@ -379,6 +321,7 @@ export default {
         this.frindlink = 1;
       }
     },
+
   },
   mounted () {
     this.setBannerH()

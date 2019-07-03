@@ -12,11 +12,16 @@ export default {
       about: {
         abouttxt: 'Zhejiang University International Innovation Research Institute was established as a private non-enterprise research institute under Zhejiang University. It was founded by Sai Bole Investment Group. As an international innovation and entrepreneurship platform, relying on the resources and capital advantages of Zhejiang University and Cybertron, the institute will “forge the international industry-university-research cooperation innovation chain, promote innovation and ecological development and regional economic development',
       },
-      titles: [
+      titlespc: [
         'Zhejiang University International Innovation Institute signed with the Higher Economics Business School of the University of Lausanne, Switzerland',
         'China-Sweden Enterprise Innovation and Development Dialogue - China-EU Dialogue High Point Switzerland Lausanne China Economic Gold...',
         'Innovation and ingenuity" Sino-Japanese University joins hands with capital to discuss technological innovation and Zhejiang University...',
-      ]
+      ],
+      titlesmb: [
+        'Zhejiang University International...',
+        'China-Sweden Enterprise Innovation ...',
+        'Innovation and ingenuity" Sino-...',
+      ],
     },
     more: 'Details',
     readmore: 'Show full text',

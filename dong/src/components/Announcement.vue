@@ -1,16 +1,5 @@
 <template>
   <div>
-    <mt-header title="通知公告"
-               v-show="goback"
-               fixed>
-      <router-link to="/"
-                   slot="left">
-        <mt-button icon="back">返回</mt-button>
-      </router-link>
-      <div slot="right">
-        <mt-button @click="changeLanguage">{{lang}}</mt-button>
-      </div>
-    </mt-header>
     <div class="banner">
       <dl v-show="title">
         <dd></dd>
@@ -79,33 +68,6 @@
                  :underline="false">联系我们</el-link>
       </div>
     </div> -->
-    <!-- 移动端导航栏 -->
-    <div v-show="headdown"
-         class="headdown">
-      <mt-tabbar v-model="selected"
-                 :fixed="fixed">
-        <mt-tab-item id="ICC简介">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          ICC简介
-        </mt-tab-item>
-        <mt-tab-item id="组织架构">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          组织架构
-        </mt-tab-item>
-        <mt-tab-item id="最新动态">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          最新动态
-        </mt-tab-item>
-        <mt-tab-item id="通知公告">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          通知公告
-        </mt-tab-item>
-      </mt-tabbar>
-    </div>
   </div>
 </template>
 
@@ -114,7 +76,6 @@ import Cookies from 'js-cookie'
 export default {
   data () {
     return {
-      lang: "",
       fit: "fill",
       url: require("../assets/newimages/1.png"),
       left: 1,
@@ -170,32 +131,6 @@ export default {
       ],
     }
   },
-  watch: {
-    selected (newval) {
-      switch (newval) {
-        case 'ICC简介':
-          this.$router.push({
-            path: '/IICIntroduction'
-          })
-          break;
-        case '组织架构':
-          this.$router.push({
-            path: '/Organization'
-          })
-          break;
-        case '最新动态':
-          this.$router.push({
-            path: '/News'
-          })
-          break;
-        case '通知公告':
-          this.$router.push({
-            path: '/Announcement'
-          })
-          break;
-      }
-    }
-  },
   methods: {
     load () {
       this.item += 2
@@ -215,31 +150,9 @@ export default {
         this.left = 1;
       }
     },
-    getLangageCookie () {
-      let language = Cookies.get('language');
-      if (language == "zh" || language == null) {
-        this.lang = "English";
-      }
-      else {
-        this.lang = "中文";
-      }
-    },
-    changeLanguage () {
-      if (this.lang == "中文") {
-        this.lang = "English";
-        this.$i18n.locale = "zh";
-        Cookies.set('language', "zh");
-      }
-      else {
-        this.lang = "中文";
-        this.$i18n.locale = "en";
-        Cookies.set('language', "en");
-      }
-    }
   },
   mounted () {
     this.getDeviceCookie()
-    this.getLangageCookie()
   }
 }
 </script>

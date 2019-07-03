@@ -1,16 +1,5 @@
 <template>
   <div>
-    <mt-header title="城市功能区域配套区"
-               v-show="goback"
-               fixed>
-      <router-link to="/"
-                   slot="left">
-        <mt-button icon="back">返回</mt-button>
-      </router-link>
-      <div slot="right">
-        <mt-button @click="changeLanguage">{{lang}}</mt-button>
-      </div>
-    </mt-header>
     <div class="banner">
       <dl v-show="title">
         <dd></dd>
@@ -87,33 +76,6 @@
                  :underline="false">联系我们</el-link>
       </div>
     </div>
-    <!-- 移动端导航栏 -->
-    <div v-show="headdown"
-         class="headdown">
-      <mt-tabbar v-model="selected"
-                 :fixed="fixed">
-        <mt-tab-item id="人才培育">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          人才培育
-        </mt-tab-item>
-        <mt-tab-item id="发展引领">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          发展引领
-        </mt-tab-item>
-        <mt-tab-item id="科技创新">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          科技创新
-        </mt-tab-item>
-        <mt-tab-item id="城市功能">
-          <span slot="icon"
-                class="el-icon-s-home"></span>
-          城市功能
-        </mt-tab-item>
-      </mt-tabbar>
-    </div>
   </div>
 </template>
 
@@ -122,7 +84,6 @@ import Cookies from 'js-cookie'
 export default {
   data () {
     return {
-      lang: "",
       fit: 'fill',
       url1: require("../assets/industry1.jpg"),
       url2: require("../assets/industry2.png"),
@@ -138,32 +99,6 @@ export default {
         './Contact',
         './Talent',
       ],
-    }
-  },
-  watch: {
-    selected (newval) {
-      switch (newval) {
-        case '人才培育':
-          this.$router.push({
-            path: '/Tech'
-          })
-          break;
-        case '发展引领':
-          this.$router.push({
-            path: '/International'
-          })
-          break;
-        case '科技创新':
-          this.$router.push({
-            path: '/Investment'
-          })
-          break;
-        case '城市功能':
-          this.$router.push({
-            path: '/Industry'
-          })
-          break;
-      }
     }
   },
   methods: {
@@ -184,31 +119,9 @@ export default {
         this.left = 1;
       }
     },
-    getLangageCookie () {
-      let language = Cookies.get('language');
-      if (language == "zh" || language == null) {
-        this.lang = "English";
-      }
-      else {
-        this.lang = "中文";
-      }
-    },
-    changeLanguage () {
-      if (this.lang == "中文") {
-        this.lang = "English";
-        this.$i18n.locale = "zh";
-        Cookies.set('language', "zh");
-      }
-      else {
-        this.lang = "中文";
-        this.$i18n.locale = "en";
-        Cookies.set('language', "en");
-      }
-    }
   },
   mounted () {
     this.getDeviceCookie()
-    this.getLangageCookie()
   }
 }
 </script>

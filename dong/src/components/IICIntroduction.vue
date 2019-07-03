@@ -97,7 +97,9 @@ export default {
 <style scoped>
 .banner {
   height: 380px;
-  background-image: url("../assets/contact.png");
+  background-image: url("../assets/about.jpg");
+  background-size: auto 100%;
+  background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
 }

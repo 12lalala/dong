@@ -117,7 +117,9 @@ export default {
 <style scoped>
 .banner {
   height: 380px;
-  background-image: url("../assets/center.jpg");
+  background-image: url("../assets/division.jpg");
+  background-size: auto 100%;
+  background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
 }

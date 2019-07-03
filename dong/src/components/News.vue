@@ -172,7 +172,9 @@ export default {
 /* 滚动条 */
 .banner {
   height: 380px;
-  background-image: url("../assets/contact.png");
+  background-image: url("../assets/news.jpg");
+  background-size: auto 100%;
+  background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
 }

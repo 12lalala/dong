@@ -179,6 +179,8 @@ export default {
   .banner {
     height: 220px;
     background-image: url("../assets/contact.png");
+    background-size: auto 100%;
+    background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
   }

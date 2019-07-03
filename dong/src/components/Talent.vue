@@ -265,7 +265,9 @@ export default {
 @media only screen and (max-width: 830px) {
   .banner {
     height: 220px;
-    background-image: url("../assets/contact.png");
+    background-image: url("../assets/talent.png");
+    background-size: auto 100%;
+    background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
   }

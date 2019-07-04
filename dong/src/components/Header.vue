@@ -64,7 +64,7 @@
           </span>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item command="首页">首页</el-dropdown-item>
-            <el-dropdown-item command="ICC简介">ICC简介</el-dropdown-item>
+            <el-dropdown-item command="ICC简介">ICI简介</el-dropdown-item>
             <el-dropdown-item command="组织架构">组织架构</el-dropdown-item>
             <el-dropdown-item command="国际高端人才培育区">国际高端人才培育区</el-dropdown-item>
             <el-dropdown-item command="新工科发展引领区">新工科发展引领区</el-dropdown-item>
@@ -72,8 +72,8 @@
             <el-dropdown-item command="城市功能区域配套区">城市功能区域配套区</el-dropdown-item>
             <el-dropdown-item command="最新动态">最新动态</el-dropdown-item>
             <el-dropdown-item command="通知公告">通知公告</el-dropdown-item>
-            <el-dropdown-item command="联系我们">联系我们</el-dropdown-item>
             <el-dropdown-item command="人才招聘">人才招聘</el-dropdown-item>
+            <el-dropdown-item command="联系我们">联系我们</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
       </div>
@@ -267,9 +267,13 @@ export default {
       let gogoC = Cookies.get('gogogo');
       if (gogoC == "首页" || gogoC == null) {
         this.gogo = "首页";
+        this.$router.push({
+          path: '/'
+        })
       }
       else {
         this.gogo = gogoC;
+        this.gogogo(this.gogo);
       }
     }
   },

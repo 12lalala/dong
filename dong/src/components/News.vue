@@ -300,7 +300,7 @@ export default {
 @media only screen and (max-width: 830px) {
   .banner {
     height: 220px;
-    background-image: url("../assets/news.jpg");
+    background-image: url("../assets/news1.jpg");
     background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;

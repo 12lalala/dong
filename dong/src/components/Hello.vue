@@ -20,7 +20,7 @@
                      :title="$t('Hello.p1m')">
           <dl>
             <dt>
-              <img style="object-fit: cover; width: 280px; height: 170px;"
+              <img class="show"
                    :src="imgCard[0]"
                    :alt="$t('Hello.p1')">
             </dt>
@@ -35,7 +35,7 @@
                      :title="$t('Hello.p2m')">
           <dl>
             <dt>
-              <img style="object-fit: cover; width: 280px; height: 170px;"
+              <img class="show"
                    :src="imgCard[1]"
                    :alt="$t('Hello.p2')">
             </dt>
@@ -50,7 +50,7 @@
                      :title="$t('Hello.p3m')">
           <dl>
             <dt>
-              <img style="object-fit: cover; width: 280px; height: 170px;"
+              <img class="show"
                    :src="imgCard[2]"
                    :alt="$t('Hello.p3')">
             </dt>
@@ -65,7 +65,7 @@
                      :title="$t('Hello.p4m')">
           <dl>
             <dt>
-              <img style="object-fit: cover; width: 280px; height: 170px;"
+              <img class="show"
                    :src="imgCard[3]"
                    :alt="$t('Hello.p4')">
             </dt>
@@ -407,6 +407,11 @@ a:visited {
   padding: 4em 0;
   overflow: hidden;
 }
+.show {
+  object-fit: cover;
+  width: 280px;
+  height: 170px;
+}
 .part1 ul {
   width: 25%;
   float: left;
@@ -722,6 +727,11 @@ ul {
   .cardimg {
     width: 100%;
     height: 200px;
+  }
+  .show {
+    object-fit: cover;
+    width: 169.2px;
+    height: 100px;
   }
   /* .about {
     margin: 0 auto;

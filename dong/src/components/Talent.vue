@@ -265,7 +265,7 @@ export default {
 @media only screen and (max-width: 830px) {
   .banner {
     height: 220px;
-    background-image: url("../assets/talent.png");
+    background-image: url("../assets/talent1.png");
     background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -315,6 +315,15 @@ export default {
   .content .content-sub .sub2 p {
     margin-top: 0;
     line-height: 1.8;
+  }
+  .content {
+    max-width: 1200px;
+    padding: 15.3px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 50px;
   }
 }
 </style>

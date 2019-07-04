@@ -178,7 +178,7 @@ export default {
 @media only screen and (max-width: 830px) {
   .banner {
     height: 220px;
-    background-image: url("../assets/contact.png");
+    background-image: url("../assets/contact1.png");
     background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -219,7 +219,7 @@ export default {
   }
   .content {
     max-width: 1200px;
-    padding: 5.3px;
+    padding: 15.3px;
     margin: 0 auto;
     padding-bottom: 20px;
     background-color: #fff;
